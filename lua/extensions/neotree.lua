@@ -8,7 +8,7 @@ neotree.setup({
     highlight = "NeoTreeFileName",
   },
   window = {
-    width = 50,
+    width = 30,
   },
   filesystem = {
     follow_current_file = true,

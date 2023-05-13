@@ -12,6 +12,13 @@ cmd[[filetype plugin on]]
 -- Disable comments on pressing Enter
 cmd[[autocmd FileType * setlocal formatoptions-=cro]]
 
+-- General {{{
+vim.wo.wrap = false
+opt.hidden = true
+opt.number = true
+opt.relativenumber = true
+-- }}}
+
 -- Tabs {{{
 opt.expandtab = true                -- Use spaces by default
 opt.shiftwidth = 2                  -- Set amount of space characters, when we press "<" or ">"

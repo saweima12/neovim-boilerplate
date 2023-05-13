@@ -114,15 +114,35 @@ return {
   },
   -- }}}
 
-  -- Theme: Gruvbox Material {{{
-  {
-    "sainnhe/gruvbox-material",
-    lazy = false,
-    config = function ()
-      require "extensions.colorscheme.gruvbox"
+-- Theme -> Edge {{{
+{
+  "sainnhe/edge",
+  lazy = false,
+  config = function()
+    require "extensions.colorscheme.edge"
+  end
+
+},
+-- }}}
+
+-- StatusBar -> Lualine {{{
+{
+  "nvim-lualine/lualine.nvim",
+  requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+  config = function()
+    require "extensions.lualine"
+  end
+},
+-- }}}
+
+-- Comment {{{ 
+{
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
     end
-  },
-  -- }}}
+}
+-- }}}
 
 }
 

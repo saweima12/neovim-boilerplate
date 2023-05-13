@@ -1,7 +1,8 @@
 require "helpers/globals"
 require "helpers/keyboard"
 
-g.mapleader = ' '                                                                 -- Use Space, like key for alternative hotkeys
+-- Set leader key
+g.mapleader = '\\'
 
 -- LSP {{{
 nm('K', '<cmd>lua vim.lsp.buf.hover()<CR>' )                                      -- Hover object
@@ -31,5 +32,8 @@ nm('gr', '<cmd>Trouble lsp_references<CR>')                                     
 -- Neo Tree {{{
 nm('<leader>v', '<cmd>NeoTreeFocusToggle<CR>')                                        -- Toggle file explorer
 -- }}}
+
+
+
 
 -- vim:tabstop=2 shiftwidth=2 expandtab syntax=lua foldmethod=marker foldlevelstart=0 foldlevel=0
