@@ -4,7 +4,6 @@
   Info: Use <zo> and <zc> to open and close foldings
   See: https://github.com/wbthomason/packer.nvim
 ]]
-
 require "helpers/globals"
 
 return {
@@ -30,7 +29,7 @@ return {
       "nvim-lua/plenary.nvim",
       "MunifTanjim/nui.nvim",
     },
-    config = function ()
+    config = function()
       require "extensions.neotree"
     end
   },
@@ -138,31 +137,31 @@ return {
   -- Tabline -> Barbar {{{
   {
     'romgrk/barbar.nvim',
-     dependencies = {
-        'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
-        'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
-     },
-     version = "^1.0.01",
-     config = function ()
-        require "extensions.barbar"
-     end
+    dependencies = {
+      'lewis6991/gitsigns.nvim',     -- OPTIONAL: for git status
+      'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
+    },
+    version = "^1.0.01",
+    config = function()
+      require "extensions.barbar"
+    end
   },
 
   -- }}}
 
   -- Comment {{{
   {
-      'numToStr/Comment.nvim',
-      config = function()
-          require('Comment').setup()
-      end
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end
   },
   -- }}}
 
   -- Terminal -> ToggleTerm {{{
   {
     'akinsho/toggleterm.nvim',
-    config = function ()
+    config = function()
       require "extensions.toggleterm"
     end
   },
@@ -171,7 +170,7 @@ return {
   -- Outline {{{
   {
     'simrat39/symbols-outline.nvim',
-    config = function ()
+    config = function()
       require "extensions.symbols-outline"
     end
   },
@@ -182,12 +181,30 @@ return {
   {
     'phaazon/hop.nvim',
     branch = "v2",
-    config = function ()
+    config = function()
       require "extensions.hop"
+    end
+  },
+  -- }}}
+
+  -- Null-ls {{{
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    requires = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require "extensions.null-ls"
+    end
+  },
+  -- }}}
+
+  -- Which Keys {{{
+  {
+    "folke/which-key.nvim",
+    config = function()
+      require "extensions.which-key"
     end
   }
   -- }}}
-
 }
 
 -- vim:tabstop=2 shiftwidth=2 expandtab syntax=lua foldmethod=marker foldlevelstart=0 foldlevel=0
