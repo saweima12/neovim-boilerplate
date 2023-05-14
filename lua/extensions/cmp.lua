@@ -30,8 +30,8 @@ cmp.setup{
     }),
 
     -- Use <C-up> and <C-down> to scroll docs.
-    ['<C-up>'] = cmp.mapping(cmp.mapping.scroll_docs(-4)),
-    ['<C-down>'] = cmp.mapping(cmp.mapping.scroll_docs(4)),
+    ['<C-up>'] = cmp.mapping(cmp.mapping.scroll_docs(-2)),
+    ['<C-down>'] = cmp.mapping(cmp.mapping.scroll_docs(2)),
 
     -- Use <C-p> and <C-n> to navigate through completion variants
     ['<up>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 'c' }),
