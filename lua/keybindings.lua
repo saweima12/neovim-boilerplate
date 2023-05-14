@@ -58,7 +58,7 @@ nm('<leader>x', '<cmd>TroubleToggle<CR>')                                 -- Sho
 nm('gr', '<cmd>Trouble lsp_references<CR>')                               -- Show use of object in project
 -- }}}
 
--- Neo Tree {{{
+-- NeoTree {{{
 nm('<leader>v', '<cmd>NeoTreeFocusToggle<CR>')                                        -- Toggle file explorer
 -- }}}
 

@@ -76,7 +76,7 @@ return {
     'onsails/lspkind-nvim',
     lazy = true,
     config = function()
-      require "extensions.lspkind"
+      require "extensions.clspkind"
     end
   },
   -- }}}

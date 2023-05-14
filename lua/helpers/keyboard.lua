@@ -2,7 +2,7 @@
 local map = vim.api.nvim_set_keymap 
 
 -- Normal mode keybinding setter
-function nm(key, command) 
+function nm(key, command)
 	map('n', key, command, {noremap = true})
 end
 
