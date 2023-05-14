@@ -14,13 +14,14 @@ cmp.setup{
     end,
   },
 
+
   -- Mappings for cmp
   mapping = {
 
     -- Autocompletion menu
-    ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i' }),
-    ['<CR>'] = cmp.config.disable,                      -- Turn off autocomplete on <CR>
-    ['<C-y>'] = cmp.mapping.confirm({ select = true }), -- Turn on autocomplete on <C-y>
+    ['<C-p>'] = cmp.mapping(cmp.mapping.complete(), { 'i' }), -- C-p
+    ['<C-y>'] = cmp.config.disable,                      -- Turn off autocomplete on <C-y>
+    ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Turn on autocomplete on <CR>
 
     -- Use <C-e> to abort autocomplete
     ['<C-e>'] = cmp.mapping({
@@ -28,9 +29,13 @@ cmp.setup{
       c = cmp.mapping.close(), -- Close completion window
     }),
 
+    -- Use <C-up> and <C-down> to scroll docs.
+    ['<C-up>'] = cmp.mapping(cmp.mapping.scroll_docs(-4)),
+    ['<C-down>'] = cmp.mapping(cmp.mapping.scroll_docs(4)),
+
     -- Use <C-p> and <C-n> to navigate through completion variants
-    ['<C-p>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 'c' }),
-    ['<C-n>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 'c' }),
+    ['<up>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 'c' }),
+    ['<down>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 'c' }),
   },
 
   sources = cmp.config.sources({

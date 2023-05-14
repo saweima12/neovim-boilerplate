@@ -95,7 +95,7 @@ return {
   {
     "folke/trouble.nvim",
     lazy = true,
-    dependencies = "kyazdani42/nvim-web-devicons",
+    dependencies = "nvim-tree/nvim-web-devicons",
     config = function()
       require "extensions.trouble"
     end,
@@ -114,35 +114,79 @@ return {
   },
   -- }}}
 
--- Theme -> Edge {{{
-{
-  "sainnhe/edge",
-  lazy = false,
-  config = function()
-    require "extensions.colorscheme.edge"
-  end
-
-},
--- }}}
-
--- StatusBar -> Lualine {{{
-{
-  "nvim-lualine/lualine.nvim",
-  requires = { 'nvim-tree/nvim-web-devicons', opt = true },
-  config = function()
-    require "extensions.lualine"
-  end
-},
--- }}}
-
--- Comment {{{ 
-{
-    'numToStr/Comment.nvim',
+  -- Theme -> Edge {{{
+  {
+    "sainnhe/edge",
+    lazy = false,
     config = function()
-        require('Comment').setup()
+      require "extensions.colorscheme.edge"
     end
-}
--- }}}
+
+  },
+  -- }}}
+
+  -- StatusBar -> Lualine {{{
+  {
+    "nvim-lualine/lualine.nvim",
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+    config = function()
+      require "extensions.lualine"
+    end
+  },
+  -- }}}
+
+  -- Tabline -> Barbar {{{
+  {
+    'romgrk/barbar.nvim',
+     dependencies = {
+        'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
+        'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
+     },
+     version = "^1.0.01",
+     config = function ()
+        require "extensions.barbar"
+     end
+  },
+
+  -- }}}
+
+  -- Comment {{{
+  {
+      'numToStr/Comment.nvim',
+      config = function()
+          require('Comment').setup()
+      end
+  },
+  -- }}}
+
+  -- Terminal -> ToggleTerm {{{
+  {
+    'akinsho/toggleterm.nvim',
+    config = function ()
+      require "extensions.toggleterm"
+    end
+  },
+  -- }}}
+
+  -- Outline {{{
+  {
+    'simrat39/symbols-outline.nvim',
+    config = function ()
+      require "extensions.symbols-outline"
+    end
+  },
+
+  -- }}}
+
+  -- Hop {{{
+  {
+    'phaazon/hop.nvim',
+    branch = "v2",
+    config = function ()
+      require "extensions.hop"
+    end
+  }
+  -- }}}
 
 }
 
