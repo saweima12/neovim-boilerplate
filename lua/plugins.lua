@@ -203,6 +203,15 @@ return {
     config = function()
       require "extensions.which-key"
     end
+  },
+  -- }}}
+
+  -- Nvim-AutoParis {{{
+  {
+    "windwp/nvim-autopairs",
+    config = function ()
+      require "extensions.nvim-autopairs"
+    end
   }
   -- }}}
 }
