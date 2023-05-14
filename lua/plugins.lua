@@ -212,8 +212,25 @@ return {
     config = function ()
       require "extensions.nvim-autopairs"
     end
-  }
+  },
   -- }}}
+
+-- Gopher {{{
+  {
+    "olexsmir/gopher.nvim",
+    requires = { -- dependencies
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    build = function ()
+      cmd [[silent! GoInstallDeps]]
+    end,
+    config = function ()
+      require "extensions.gopher"
+    end
+  },
+--- }}}
+
 }
 
 -- vim:tabstop=2 shiftwidth=2 expandtab syntax=lua foldmethod=marker foldlevelstart=0 foldlevel=0
