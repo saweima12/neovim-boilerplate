@@ -93,7 +93,7 @@ return {
   -- Trouble {{{
   {
     "folke/trouble.nvim",
-    lazy = true,
+    lazy = false,
     dependencies = "nvim-tree/nvim-web-devicons",
     config = function()
       require "extensions.trouble"

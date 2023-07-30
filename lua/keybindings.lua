@@ -99,7 +99,10 @@ nm('<C-\\>', '<cmd>ToggleTerm<CR>')
 nm("<leader>m", "<cmd>HopChar2<CR>")
 -- }}}
 
-
+-- [[ Extesion Operate
+im("kj", "<esc>")
+im("jk", "<esc>")
+--]]
 
 
 -- vim:tabstop=2 shiftwidth=2 expandtab syntax=lua foldmethod=marker foldlevelstart=0 foldlevel=0
