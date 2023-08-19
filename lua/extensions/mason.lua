@@ -16,7 +16,6 @@ mason_lspconfig.setup({
     "emmet_ls",           -- LSP for Emmet (Vue, HTML, CSS)
     "cssls",              -- LSP for CSS
     "dockerls",           -- LSP for Docker
-    "pyright",            -- LSP for Python
     "volar"               -- LSP for Vue
   }
 });
