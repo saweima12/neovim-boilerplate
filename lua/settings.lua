@@ -12,6 +12,9 @@ cmd [[filetype plugin on]]
 cmd [[autocmd FileType * setlocal formatoptions-=cro]]
 
 
+-- Set leader key
+g.mapleader = '\\'
+
 -- General {{{
 vim.wo.wrap = false
 opt.hidden = true

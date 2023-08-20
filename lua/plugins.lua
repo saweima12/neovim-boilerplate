@@ -80,7 +80,7 @@ return {
   },
   -- }}}
 
-  -- Git Signs{{{
+  -- GitSigns {{{
   {
     'lewis6991/gitsigns.nvim',
     lazy = false,
@@ -134,18 +134,18 @@ return {
   },
   -- }}}
 
-  -- Tabline -> Barbar {{{
-  {
-    'romgrk/barbar.nvim',
-    dependencies = {
-      'lewis6991/gitsigns.nvim',     -- OPTIONAL: for git status
-      'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
-    },
-    version = "^1.0.01",
-    config = function()
-      require "extensions.barbar"
-    end
-  },
+-- Tabline -> Barbar {{{
+{
+ 'romgrk/barbar.nvim',
+ dependencies = {
+   'lewis6991/gitsigns.nvim',     -- OPTIONAL: for git status
+   'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
+ },
+ version = "^1.6.5",
+ config = function()
+   require "extensions.barbar"
+ end
+},
 
   -- }}}
 
@@ -176,6 +176,16 @@ return {
   },
 
   -- }}}
+
+-- Cursorline {{{
+  {
+    'yamatsum/nvim-cursorline',
+    config = function()
+      require "extensions.nvim-cursorline"
+    end
+  },
+
+-- }}}
 
   -- Hop {{{
   {
@@ -240,8 +250,43 @@ return {
     -- or leave it empty to use the default settings
     -- refer to the configuration section below
   }
-}
+},
 -- }}}
+
+-- Mini.nvim {{{
+{ 
+  'echasnovski/mini.indentscope', version = '*', 
+  config = function()
+    require("mini.indentscope").setup{}
+  end
+},
+{ 
+  'echasnovski/mini.surround', version = '*',
+  config = function()
+    require("mini.surround").setup{}
+  end
+},
+{ 
+  'echasnovski/mini.bracketed', version = '*',
+  config = function()
+    require("mini.bracketed").setup{}
+  end
+},
+-- }}}
+
+{
+  'matbme/JABS.nvim',
+  config = function() 
+    require 'jabs'.setup{}
+  end
+},
+
+{
+  "ahmedkhalf/project.nvim",
+  config = function()
+    require("project_nvim").setup{}
+  end
+},
 
 }
 

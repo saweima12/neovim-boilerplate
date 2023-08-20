@@ -42,10 +42,10 @@ nm('gD', '<cmd>lua vim.lsp.buf.declaration()<cr>') -- Go to declaration
 
 -- Telescope {{{
 nm('gd', '<cmd>Telescope lsp_definitions<CR>')               -- Goto declaration
-nm('<leader>tp', '<cmd>Telescope oldfiles<CR>')                      -- Show recent files
+nm('<leader>tp', '<cmd>Telescope projects<CR>')              -- Show recent files
 nm('<leader>te', '<cmd>Telescope git_files<CR>')             -- Search for a file in project
 nm('<leader>tj', '<cmd>Telescope jumplist<CR>')              -- Show jumplist (previous locations)
-nm('<leader>to', '<cmd>Telescope find_files<CR>')                    -- Search for a file (ignoring git-ignore)
+nm('<leader>to', '<cmd>Telescope find_files<CR>')            -- Search for a file (ignoring git-ignore)
 nm('<leader>tb', '<cmd>Telescope git_branches<CR>')          -- Show git branches
 nm('<leader>ff', '<cmd>Telescope live_grep<CR>')             -- Find a string in project
 nm('<leader>tq', '<cmd>Telescope buffers<CR>')                       -- Show all buffers
@@ -56,11 +56,11 @@ nm('<leader>tt', '<cmd>Telescope lsp_dynamic_workspace_symbols<CR>') -- Search f
 -- Trouble {{{
 nm('<leader>x', '<cmd>TroubleToggle<CR>')   -- Show all problems in project (with help of LSP)
 nm('gr', '<cmd>Trouble lsp_references<CR>') -- Show use of object in project
+nm('gv', '<cmd>lua vim.diagnostic.open_float()<CR>') -- Show use of object in project
 -- }}}
 
 -- NeoTree {{{
 nm('<leader>v', '<cmd>NeoTreeFocusToggle<CR>') -- Toggle file explorer
-nm('<leader>ng', '<cmd>NeoTreeFocusToggle<CR>') -- Toggle file explorer
 -- }}}
 
 -- Barbar {{{
@@ -99,9 +99,15 @@ nm('<C-\\>', '<cmd>ToggleTerm<CR>')
 nm("<leader>m", "<cmd>HopChar2<CR>")
 -- }}}
 
+-- Gitsign {{{
+nm("<leader>hb", "<cmd>Gitsigns blame_line<CR>")
+-- }}}
+
+
 -- [[ Extesion Operate
-im("kj", "<esc>")
-im("jk", "<esc>")
+nm('<leader>p', '<cmd>JABSOpen<CR>')
+
+im("<leader>q", "<esc>")
 --]]
 
 

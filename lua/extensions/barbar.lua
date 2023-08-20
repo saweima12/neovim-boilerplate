@@ -9,9 +9,8 @@ cmd [[
 ]]
 
 local barbar = require("barbar")
-
 barbar.setup{
-  icons = {
-    buffer_index = true
-  }
+    icons = {
+      buffer_index = true
+    }
 }
