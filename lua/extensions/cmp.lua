@@ -56,6 +56,9 @@ cmp.setup{
   },
 }
 
+-- Add loading lsp extension
+require("extensions.lspext.golang")
+
 -- Add snippets from Friendly Snippets
 require("luasnip/loaders/from_vscode").lazy_load()
 

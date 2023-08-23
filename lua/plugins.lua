@@ -38,14 +38,15 @@ return {
   -- Telescope {{{
   {
     'nvim-telescope/telescope.nvim',
-    tag = '0.1.1',
+    tag = '0.1.2',
     lazy = false,
     dependencies = {
       "nvim-lua/plenary.nvim",
       "ahmedkhalf/project.nvim",
+      'nvim-lua/popup.nvim',
     },
     config = function()
-      require "extensions.telescope"
+      require "extensions.ctelescope"
     end
   },
   -- }}}
@@ -238,6 +239,10 @@ return {
     config = function ()
       require "extensions.gopher"
     end
+  },
+
+  {
+    'edolphin-ydf/goimpl.nvim',
   },
 --- }}}
 
