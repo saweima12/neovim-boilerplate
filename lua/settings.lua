@@ -11,7 +11,7 @@ cmd [[filetype plugin on]]
 -- Disable comments on pressing Enter
 cmd [[autocmd FileType * setlocal formatoptions-=cro]]
 
-cmd [[language en_US]]
+cmd [[language en_US.UTF-8]]
 
 -- Set leader key
 g.mapleader = '\\'
