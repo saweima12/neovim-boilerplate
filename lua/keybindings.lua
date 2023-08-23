@@ -60,7 +60,7 @@ nm('gv', '<cmd>lua vim.diagnostic.open_float()<CR>') -- Show use of object in pr
 -- }}}
 
 -- NeoTree {{{
-nm('<leader>v', '<cmd>NeoTreeFocusToggle<CR>') -- Toggle file explorer
+nm('<leader><leader>', '<cmd>NeoTreeFocusToggle<CR>') -- Toggle file explorer
 -- }}}
 
 -- Barbar {{{

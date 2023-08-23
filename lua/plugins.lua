@@ -274,19 +274,23 @@ return {
 },
 -- }}}
 
+-- Utilities - JABS {{{
 {
   'matbme/JABS.nvim',
-  config = function() 
+  config = function()
     require 'jabs'.setup{}
   end
 },
+-- }}}
 
+-- Utiities - projectView {{{
 {
   "ahmedkhalf/project.nvim",
   config = function()
     require("project_nvim").setup{}
   end
 },
+-- }}}
 
 }
 
