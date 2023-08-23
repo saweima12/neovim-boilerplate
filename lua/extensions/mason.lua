@@ -24,8 +24,19 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 -- Setup every needed language server in lspconfig
 mason_lspconfig.setup_handlers {
   function (server_name)
+    local require_path = string.format("extensions.lspext.%s", server_name)
+
     lspconfig[server_name].setup {
-      capabilities = capabilities
+      on_attach = function(client, bufnr)
+        -- Check ext package exists.
+        local ext = require(require_path)
+        if (type(ext) ~= "table") then
+          return
+        end
+
+        ext.attach(client, bufnr)
+      end,
+      capabilities = capabilities,
     }
   end,
 }
