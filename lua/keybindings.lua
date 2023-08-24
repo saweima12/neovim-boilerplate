@@ -44,13 +44,13 @@ nm('gD', '<cmd>lua vim.lsp.buf.declaration()<cr>') -- Go to declaration
 nm('gd', '<cmd>Telescope lsp_definitions<CR>')               -- Goto declaration
 nm('<leader>tp', '<cmd>Telescope projects<CR>')              -- Show recent files
 nm('<leader>te', '<cmd>Telescope git_files<CR>')             -- Search for a file in project
-nm('<leader>tj', '<cmd>Telescope jumplist<CR>')              -- Show jumplist (previous locations)
+-- nm('<leader>tj', '<cmd>Telescope jumplist<CR>')              -- Show jumplist (previous locations)
 nm('<leader>to', '<cmd>Telescope find_files<CR>')            -- Search for a file (ignoring git-ignore)
 nm('<leader>tb', '<cmd>Telescope git_branches<CR>')          -- Show git branches
 nm('<leader>ff', '<cmd>Telescope live_grep<CR>')             -- Find a string in project
-nm('<leader>tq', '<cmd>Telescope buffers<CR>')                       -- Show all buffers
+-- nm('<leader>tq', '<cmd>Telescope buffers<CR>')                       -- Show all buffers
 nm('<leader>ta', '<cmd>Telescope<CR>')                               -- Show all commands
-nm('<leader>tt', '<cmd>Telescope lsp_dynamic_workspace_symbols<CR>') -- Search for dynamic symbols
+-- nm('<leader>tt', '<cmd>Telescope lsp_dynamic_workspace_symbols<CR>') -- Search for dynamic symbols
 -- }}}
 
 -- Trouble {{{
