@@ -43,7 +43,7 @@ nm('<leader>ta', '<cmd>Telescope<CR>')                               -- Show all
 -- }}}
 
 -- Trouble {{{
-nm('<leader>x', '<cmd>TroubleToggle<CR>')   -- Show all problems in project (with help of LSP)
+nm('<leader>x', '<cmd>TroubleToggle workspace_diagnostics<CR>')   -- Show all problems in project (with help of LSP)
 nm('gr', '<cmd>TroubleToggle lsp_references<CR>') -- Show use of object in project
 nm('gv', '<cmd>lua vim.diagnostic.open_float()<CR>') -- Show use of object in project
 -- }}}
