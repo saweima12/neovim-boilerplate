@@ -96,7 +96,7 @@ nm('<C-\\>', '<cmd>ToggleTerm<CR>')
 -- }}}
 
 -- Motion Hop {{{
-nm("<leader>m", "<cmd>HopChar2<CR>")
+nm("<leader>m", "<cmd>HopChar1<CR>")
 -- }}}
 
 -- Gitsign {{{

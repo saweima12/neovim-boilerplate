@@ -51,7 +51,7 @@ return {
   },
   -- }}}
 
-  -- CMP {{{
+  -- LSP & Cmp & Dap {{{
   {
     'hrsh7th/nvim-cmp',
     event = "InsertEnter",
@@ -69,14 +69,50 @@ return {
       require "extensions.cmp"
     end
   },
-  -- }}}
 
-  -- LSP Kind {{{
+  {
+    "lvimuser/lsp-inlayhints.nvim",
+    lazy = true,
+    branch = "anticonceal",
+    config = function()
+      require("lsp-inlayhints").setup{}
+    end
+  },
+
+  {
+    "rcarriga/nvim-dap-ui",
+    dependencies = {
+      'theHamsta/nvim-dap-virtual-text',
+      'mfussenegger/nvim-dap',
+    },
+    config = function ()
+      require("dapui").setup()
+      require("nvim-dap-virtual-text").setup()
+    end
+  },
+
+  {
+    'leoluz/nvim-dap-go',
+    config = function()
+      require('dap-go').setup()
+    end
+  },
+
   {
     'onsails/lspkind-nvim',
     lazy = true,
     config = function()
       require "extensions.clspkind"
+    end
+  },
+  -- }}}
+
+  -- Null-ls {{{
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    requires = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require "extensions.null-ls"
     end
   },
   -- }}}
@@ -121,7 +157,6 @@ return {
     config = function()
       require "extensions.colorscheme.edge"
     end
-
   },
   -- }}}
 
@@ -194,16 +229,6 @@ return {
     branch = "v2",
     config = function()
       require "extensions.hop"
-    end
-  },
-  -- }}}
-
-  -- Null-ls {{{
-  {
-    "jose-elias-alvarez/null-ls.nvim",
-    requires = { "nvim-lua/plenary.nvim" },
-    config = function()
-      require "extensions.null-ls"
     end
   },
   -- }}}
