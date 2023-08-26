@@ -35,6 +35,7 @@ nm('<leader>tp', '<cmd>Telescope projects<CR>')              -- Show recent file
 nm('<leader>te', '<cmd>Telescope git_files<CR>')             -- Search for a file in project
 nm('<leader>to', '<cmd>Telescope find_files<CR>')            -- Search for a file (ignoring git-ignore)
 nm('<leader>tb', '<cmd>Telescope git_branches<CR>')          -- Show git branches
+nm('<leader>ts', '<cmd>Telescope persisted<CR>')             -- Find a string in project
 nm('<leader>ff', '<cmd>Telescope live_grep<CR>')             -- Find a string in project
 nm('<leader>ta', '<cmd>Telescope<CR>')                               -- Show all commands
 -- nm('<leader>tq', '<cmd>Telescope buffers<CR>')                       -- Show all buffers
@@ -95,6 +96,7 @@ nm('<leader>p', '<cmd>JABSOpen<CR>')
 -- SearchReplace -> Muren {{{
 nm('<leader>fr', '<cmd>MurenToggle<CR>')
 --}}}
+
 
 
 -- vim:tabstop=2 shiftwidth=2 expandtab syntax=lua foldmethod=marker foldlevelstart=0 foldlevel=0

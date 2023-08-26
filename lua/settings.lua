@@ -18,6 +18,7 @@ g.mapleader = '\\'
 
 -- General {{{
 vim.wo.wrap = false
+vim.o.sessionoptions = "buffers,curdir,folds,globals,tabpages,winpos,winsize"
 opt.hidden = true
 opt.number = true
 opt.relativenumber = true
@@ -82,5 +83,6 @@ for _, plugin in pairs(disabled_built_ins) do
   g["loaded_" .. plugin] = 1
 end
 -- }}}
+
 
 -- vim: tabstop=2 shiftwidth=2 expandtab syntax=lua foldmethod=marker foldlevelstart=1

@@ -160,6 +160,27 @@ return {
   },
 -- }}}
 
+-- Session & Dashboard {{{
+  {
+    "olimorris/persisted.nvim",
+    requires = {
+      "nvim-telescope/telescope.nvim",
+    },
+    config = function()
+      require("extensions.sessions")
+    end
+  },
+
+  {
+    'glepnir/dashboard-nvim',
+    event = 'VimEnter',
+    config = function()
+      require("extensions.dashboard")
+    end,
+    dependencies = { 'nvim-tree/nvim-web-devicons' }
+  },
+-- }}}
+
 -- StatusLine -> Lualine {{{
   {
     "nvim-lualine/lualine.nvim",
