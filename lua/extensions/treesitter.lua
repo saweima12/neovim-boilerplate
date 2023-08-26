@@ -7,8 +7,11 @@ require'nvim-treesitter.configs'.setup {
 
   -- Needed parsers
   ensure_installed = {
-    "c",
+    "bash",
     "lua",
+    "regex",
+    "markdown",
+    "markdown_inline",
     "typescript",
     "javascript",
     "go"

@@ -160,12 +160,12 @@ return {
   },
 -- }}}
 
--- StatusBar -> Lualine {{{
+-- StatusLine -> Lualine {{{
   {
     "nvim-lualine/lualine.nvim",
     requires = { 'nvim-tree/nvim-web-devicons', opt = true },
     config = function()
-      require "extensions.lualine"
+      require "extensions.statusline"
     end
   },
 -- }}}
@@ -296,7 +296,7 @@ return {
   },
   {
    'echasnovski/mini.comment', version = '*',
-    config = function() 
+    config = function()
       require("mini.comment").setup()
     end
   },
@@ -317,6 +317,25 @@ return {
     config = true,
   },
 
+-- }}}
+
+-- Improve UI {{{
+{
+  'stevearc/dressing.nvim',
+},
+
+
+{
+  "folke/noice.nvim",
+  event = "VeryLazy",
+  dependencies = {
+    "MunifTanjim/nui.nvim",
+    "rcarriga/nvim-notify",
+  },
+  config = function()
+    require("extensions.noice")
+  end
+},
 -- }}}
 
 -- Gopher {{{

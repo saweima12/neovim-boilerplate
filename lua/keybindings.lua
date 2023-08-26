@@ -1,9 +1,6 @@
 require "helpers/globals"
 require "helpers/keyboard"
 
--- Set leader key
-g.mapleader = '\\'
-
 -- Input Support {{{
 -- ## Simple move indent.
 nm('<tab>', ':><CR>')
@@ -20,6 +17,9 @@ im("[", '[<C-g>u')
 im(".", '.<C-g>u')
 im("!", '!<C-g>u')
 im("?", '?<C-g>u')
+
+-- Clean search highlight
+nm("<C-f>", "<cmd>noh<CR>")
 -- }}}
 
 -- LSP {{{
@@ -43,7 +43,8 @@ nm('<leader>ta', '<cmd>Telescope<CR>')                               -- Show all
 -- }}}
 
 -- Trouble {{{
-nm('<leader>x', '<cmd>TroubleToggle workspace_diagnostics<CR>')   -- Show all problems in project (with help of LSP)
+nm('<leader>xx', '<cmd>TroubleToggle<CR>')   -- Show all problems in project (with help of LSP)
+nm('<leader>xe', '<cmd>TroubleToggle workspace_diagnostics<CR>')   -- Show all problems in project (with help of LSP)
 nm('gr', '<cmd>TroubleToggle lsp_references<CR>') -- Show use of object in project
 nm('gv', '<cmd>lua vim.diagnostic.open_float()<CR>') -- Show use of object in project
 -- }}}

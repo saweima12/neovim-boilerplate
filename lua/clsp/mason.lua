@@ -29,7 +29,7 @@ mason_lspconfig.setup_handlers {
     }
 
     -- try to loading language extension.
-    local require_path = string.format("extensions.lspext.%s", server_name)
+    local require_path = string.format("clsp.lspext.%s", server_name)
     local ok, ext = pcall(require, require_path)
     if ok and (type(ext) == "table") then
       opt = vim.tbl_extend("force", opt, ext)
