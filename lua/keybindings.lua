@@ -10,20 +10,9 @@ nm('<tab>', ':><CR>')
 nm('<S-tab>', ':<<CR>')
 im('<S-tab>', '<C-d>')
 
-nm('<A-l>', ":><CR>")
-nm('<A-h>', ":<<CR>")
-vm('<A-l>', ":><CR>gvl")
-vm('<A-h>', ":<<CR>gvh")
-im('<A-l>', "<esc>:><CR>")
-im('<A-h>', "<esc>:<<CR>")
-
--- ## Simple move line
-nm('<A-k>', ':m -2<CR>')
-nm('<A-j>', ':m +1<CR>')
-vm('<A-j>', ":m '>+1<CR>gv=gv")
-vm('<A-k>', ":m '<-2<CR>gv=gv")
-im('<A-j>', "<esc>:m .+1<CR>==")
-im('<A-k>', "<esc>:m .-2<CR>==")
+-- QucikMove
+nm('j', '<Plug>(accelerated_jk_gj)')
+nm('k', '<Plug>(accelerated_jk_gk)')
 
 -- ## Undo Breakpoint.
 im(",", ',<C-g>u')
@@ -55,7 +44,7 @@ nm('<leader>ta', '<cmd>Telescope<CR>')                               -- Show all
 
 -- Trouble {{{
 nm('<leader>x', '<cmd>TroubleToggle<CR>')   -- Show all problems in project (with help of LSP)
-nm('gr', '<cmd>Trouble lsp_references<CR>') -- Show use of object in project
+nm('gr', '<cmd>TroubleToggle lsp_references<CR>') -- Show use of object in project
 nm('gv', '<cmd>lua vim.diagnostic.open_float()<CR>') -- Show use of object in project
 -- }}}
 
@@ -84,7 +73,6 @@ nm('<A-0>', ':BufferLast<CR>')
 -- Close buffer
 nm('<A-c>', ':BufferClose<CR>')
 nm('<A-S-c>', ':BufferClose!<CR>')
-
 -- }}}
 
 -- SymbolsOutline {{{
@@ -101,6 +89,10 @@ nm("<leader>gb", "<cmd>Gitsigns blame_line<CR>")
 
 -- JABS {{{
 nm('<leader>p', '<cmd>JABSOpen<CR>')
+--}}}
+
+-- JABS {{{
+nm('<leader>fr', '<cmd>MurenToggle<CR>')
 --}}}
 
 

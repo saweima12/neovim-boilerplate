@@ -16,38 +16,7 @@ return {
       "neovim/nvim-lspconfig",
     },
     config = function()
-      require "extensions.mason"
-    end
-  },
-  -- }}}
-
-  -- Neo Tree {{{
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v2.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "MunifTanjim/nui.nvim",
-    },
-    config = function()
-      require "extensions.neotree"
-    end
-  },
-  -- }}}
-
-  -- Telescope {{{
-  {
-    'nvim-telescope/telescope.nvim',
-    tag = '0.1.2',
-    lazy = false,
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "ahmedkhalf/project.nvim",
-      'nvim-lua/popup.nvim',
-      "ahmedkhalf/project.nvim",
-    },
-    config = function()
-      require "extensions.ctelescope"
+      require "clsp.mason"
     end
   },
   -- }}}
@@ -67,7 +36,26 @@ return {
       'rafamadriz/friendly-snippets',
     },
     config = function()
-      require "extensions.cmp"
+      require "clsp.cmp"
+    end
+  },
+
+  {
+    'mfussenegger/nvim-dap',
+    dependencies = {
+      'theHamsta/nvim-dap-virtual-text',
+      "rcarriga/nvim-dap-ui",
+    },
+    config = function ()
+      require("clsp.dap")
+    end
+  },
+
+  {
+    'onsails/lspkind-nvim',
+    lazy = true,
+    config = function()
+      require "clsp.clspkind"
     end
   },
 
@@ -80,17 +68,6 @@ return {
     end
   },
 
-  {
-    "rcarriga/nvim-dap-ui",
-    dependencies = {
-      'theHamsta/nvim-dap-virtual-text',
-      'mfussenegger/nvim-dap',
-    },
-    config = function ()
-      require("dapui").setup()
-      require("nvim-dap-virtual-text").setup()
-    end
-  },
 
   {
     'leoluz/nvim-dap-go',
@@ -98,27 +75,49 @@ return {
       require('dap-go').setup()
     end
   },
-
-  {
-    'onsails/lspkind-nvim',
-    lazy = true,
-    config = function()
-      require "extensions.clspkind"
-    end
-  },
   -- }}}
 
-  -- Null-ls {{{
+-- Null-ls {{{
   {
     "jose-elias-alvarez/null-ls.nvim",
     requires = { "nvim-lua/plenary.nvim" },
     config = function()
-      require "extensions.null-ls"
+      require "clsp.null-ls"
     end
   },
-  -- }}}
+-- }}}
 
-  -- GitSigns {{{
+-- NeoTree {{{
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v2.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+    },
+    config = function()
+      require "extensions.neotree"
+    end
+  },
+-- }}}
+
+-- Telescope {{{
+  {
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.2',
+    lazy = false,
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      'nvim-lua/popup.nvim',
+      "ahmedkhalf/project.nvim",
+    },
+    config = function()
+      require "extensions.ctelescope"
+    end
+  },
+-- }}}
+
+-- GitSigns {{{
   {
     'lewis6991/gitsigns.nvim',
     lazy = false,
@@ -126,9 +125,9 @@ return {
       require "extensions.gitsigns"
     end
   },
-  -- }}}
+-- }}}
 
-  -- Trouble {{{
+-- Trouble {{{
   {
     "folke/trouble.nvim",
     lazy = false,
@@ -137,9 +136,9 @@ return {
       require("trouble").setup{}
     end,
   },
-  -- }}}
+-- }}}
 
-  -- TreeSitter {{{
+-- TreeSitter {{{
   {
     "nvim-treesitter/nvim-treesitter",
     lazy = false,
@@ -149,9 +148,9 @@ return {
       require "extensions.treesitter"
     end
   },
-  -- }}}
+-- }}}
 
-  -- Theme -> Edge {{{
+-- Theme -> Edge {{{
   {
     "sainnhe/edge",
     lazy = false,
@@ -159,9 +158,9 @@ return {
       require "extensions.colorscheme.edge"
     end
   },
-  -- }}}
+-- }}}
 
-  -- StatusBar -> Lualine {{{
+-- StatusBar -> Lualine {{{
   {
     "nvim-lualine/lualine.nvim",
     requires = { 'nvim-tree/nvim-web-devicons', opt = true },
@@ -169,50 +168,64 @@ return {
       require "extensions.lualine"
     end
   },
-  -- }}}
+-- }}}
 
 -- Tabline -> Barbar {{{
-{
- 'romgrk/barbar.nvim',
- dependencies = {
-   'lewis6991/gitsigns.nvim',     -- OPTIONAL: for git status
-   'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
- },
- version = "^1.6.5",
- config = function()
-   require "extensions.barbar"
- end
-},
-
-  -- }}}
-
-  -- Comment {{{
   {
-    'numToStr/Comment.nvim',
+   'romgrk/barbar.nvim',
+   dependencies = {
+     'lewis6991/gitsigns.nvim',     -- OPTIONAL: for git status
+     'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
+   },
+   version = "^1.6.5",
+   config = function()
+     require "extensions.barbar"
+   end
+  },
+-- }}}
+
+-- BufferView - JABS {{{
+  {
+    'matbme/JABS.nvim',
     config = function()
-      require('Comment').setup()
+      require 'jabs'.setup{}
     end
   },
-  -- }}}
+-- }}}
 
-  -- Terminal -> ToggleTerm {{{
-  {
-    'akinsho/toggleterm.nvim',
-    config = function()
-      require "extensions.toggleterm"
-    end
-  },
-  -- }}}
-
-  -- Outline {{{
+-- Outline {{{
   {
     'simrat39/symbols-outline.nvim',
     config = function()
       require("symbols-outline").setup{}
     end
   },
+-- }}}
 
-  -- }}}
+-- Which Keys {{{
+  {
+    "folke/which-key.nvim",
+    config = function()
+      require "extensions.which-key"
+    end
+  },
+-- }}}
+
+-- todo-comments {{{
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+  },
+-- }}}
+
+-- Terminal -> ToggleTerm {{{
+  {
+    'akinsho/toggleterm.nvim',
+    config = function()
+      require "extensions.toggleterm"
+    end
+  },
+-- }}}
 
 -- Cursorline {{{
   {
@@ -221,10 +234,21 @@ return {
       require "extensions.nvim-cursorline"
     end
   },
-
 -- }}}
 
-  -- Hop {{{
+-- Utilities -> Window-Picker {{{
+  {
+    's1n7ax/nvim-window-picker',
+    name = 'window-picker',
+    event = 'VeryLazy',
+    version = '2.*',
+    config = function()
+      require('extensions.window-picker')
+    end,
+  },
+-- }}}
+
+-- Utilities -> QuickMove {{{
   {
     'phaazon/hop.nvim',
     branch = "v2",
@@ -232,25 +256,70 @@ return {
       require("hop").setup{}
     end
   },
-  -- }}}
 
-  -- Which Keys {{{
   {
-    "folke/which-key.nvim",
-    config = function()
-      require "extensions.which-key"
-    end
+    'rainbowhxch/accelerated-jk.nvim'
   },
-  -- }}}
+-- }}}
 
-  -- Nvim-AutoParis {{{
+-- Utilities -> Nvim-AutoParis {{{
   {
     "windwp/nvim-autopairs",
     config = function ()
       require("nvim-autopairs").setup{}
     end
   },
-  -- }}}
+-- }}}
+
+-- Utilities -> Mini.nvim {{{
+  {
+    'echasnovski/mini.indentscope', version = '*',
+    config = function()
+      require("mini.indentscope").setup{}
+    end
+  },
+  {
+    'echasnovski/mini.surround', version = '*',
+    config = function()
+      require("mini.surround").setup{}
+    end
+  },
+  {
+    'echasnovski/mini.bracketed', version = '*',
+    config = function()
+      require("mini.bracketed").setup{}
+    end
+  },
+  {
+    'echasnovski/mini.move', version = '*',
+    config = function()
+      require("mini.move").setup()
+    end
+  },
+  {
+   'echasnovski/mini.comment', version = '*',
+    config = function() 
+      require("mini.comment").setup()
+    end
+  },
+-- }}}
+
+-- Utiities -> BetterEscape {{{
+  {
+    "max397574/better-escape.nvim",
+    config = function()
+      require"extensions.better-escape"
+    end,
+  },
+-- }}}
+
+-- Utilities -> SearchRelace {{{
+  {
+    'AckslD/muren.nvim',
+    config = true,
+  },
+
+-- }}}
 
 -- Gopher {{{
   {
@@ -270,57 +339,6 @@ return {
   {
     'edolphin-ydf/goimpl.nvim',
   },
---- }}}
-
--- todo-comments {{{
-{
-  "folke/todo-comments.nvim",
-  dependencies = { "nvim-lua/plenary.nvim" },
-  opts = {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
-  }
-},
--- }}}
-
--- Mini.nvim {{{
-{ 
-  'echasnovski/mini.indentscope', version = '*', 
-  config = function()
-    require("mini.indentscope").setup{}
-  end
-},
-{ 
-  'echasnovski/mini.surround', version = '*',
-  config = function()
-    require("mini.surround").setup{}
-  end
-},
-{ 
-  'echasnovski/mini.bracketed', version = '*',
-  config = function()
-    require("mini.bracketed").setup{}
-  end
-},
--- }}}
-
--- Utilities - JABS {{{
-{
-  'matbme/JABS.nvim',
-  config = function()
-    require 'jabs'.setup{}
-  end
-},
--- }}}
-
--- Utiities - BetterEscape {{{
-{
-  "max397574/better-escape.nvim",
-  config = function()
-    require"extensions.better-escape"
-  end,
-},
 -- }}}
 
 

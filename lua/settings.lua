@@ -13,11 +13,6 @@ cmd [[autocmd FileType * setlocal formatoptions-=cro]]
 
 cmd [[language en_US.UTF-8]]
 
-cmd [[
-  let g:sonokai_style = 'andromeda'
-  let g:sonokai_better_performance = 1
-]]
-
 -- Set leader key
 g.mapleader = '\\'
 
