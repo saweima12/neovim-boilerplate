@@ -49,7 +49,7 @@ nm('gv', '<cmd>lua vim.diagnostic.open_float()<CR>') -- Show use of object in pr
 -- }}}
 
 -- NeoTree {{{
-nm('<leader><leader>', '<cmd>NeoTreeFocusToggle<CR>') -- Toggle file explorer
+nm('<leader><leader>', '<cmd>Neotree toggle reveal left<CR>') -- Toggle file explorer
 -- }}}
 
 -- Barbar {{{
@@ -87,11 +87,11 @@ nm("<leader>m", "<cmd>HopChar1<CR>")
 nm("<leader>gb", "<cmd>Gitsigns blame_line<CR>")
 -- }}}
 
--- JABS {{{
+-- BufferView -> JABS {{{
 nm('<leader>p', '<cmd>JABSOpen<CR>')
 --}}}
 
--- JABS {{{
+-- SearchReplace -> Muren {{{
 nm('<leader>fr', '<cmd>MurenToggle<CR>')
 --}}}
 

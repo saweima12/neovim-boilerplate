@@ -11,7 +11,9 @@ neotree.setup({
     width = 30,
   },
   filesystem = {
-    follow_current_file = true,
+    follow_current_file = {
+      enabled = true
+    },
   },
 })
 

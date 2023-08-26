@@ -21,7 +21,7 @@ return {
   },
   -- }}}
 
-  -- LSP & Cmp & Dap {{{
+-- LSP & Cmp & Dap {{{
   {
     'hrsh7th/nvim-cmp',
     event = "InsertEnter",
@@ -75,7 +75,7 @@ return {
       require('dap-go').setup()
     end
   },
-  -- }}}
+-- }}}
 
 -- Null-ls {{{
   {
@@ -87,21 +87,21 @@ return {
   },
 -- }}}
 
--- NeoTree {{{
+-- Explorer -> NeoTree {{{
   {
     "nvim-neo-tree/neo-tree.nvim",
-    branch = "v2.x",
+    branch = "v3.x",
     dependencies = {
       "nvim-lua/plenary.nvim",
       "MunifTanjim/nui.nvim",
     },
     config = function()
-      require "extensions.neotree"
+      require "extensions.explorer"
     end
   },
 -- }}}
 
--- Telescope {{{
+-- Finder -> Telescope {{{
   {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.2',
@@ -112,7 +112,7 @@ return {
       "ahmedkhalf/project.nvim",
     },
     config = function()
-      require "extensions.ctelescope"
+      require "extensions.fuzzyfinder"
     end
   },
 -- }}}
@@ -138,7 +138,7 @@ return {
   },
 -- }}}
 
--- TreeSitter {{{
+-- TreeSitter -> Nvim-Treesitter {{{
   {
     "nvim-treesitter/nvim-treesitter",
     lazy = false,
@@ -174,17 +174,15 @@ return {
   {
    'romgrk/barbar.nvim',
    dependencies = {
-     'lewis6991/gitsigns.nvim',     -- OPTIONAL: for git status
-     'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
    },
    version = "^1.6.5",
    config = function()
-     require "extensions.barbar"
+     require "extensions.tabline"
    end
   },
 -- }}}
 
--- BufferView - JABS {{{
+-- BufferView -> JABS {{{
   {
     'matbme/JABS.nvim',
     config = function()
@@ -193,7 +191,7 @@ return {
   },
 -- }}}
 
--- Outline {{{
+-- Outline -> SymbolsOutline {{{
   {
     'simrat39/symbols-outline.nvim',
     config = function()
@@ -202,7 +200,7 @@ return {
   },
 -- }}}
 
--- Which Keys {{{
+-- KeyTips -> WhichKeys {{{
   {
     "folke/which-key.nvim",
     config = function()
@@ -211,7 +209,7 @@ return {
   },
 -- }}}
 
--- todo-comments {{{
+-- TodoList -> TodoComments {{{
   {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
@@ -222,21 +220,21 @@ return {
   {
     'akinsho/toggleterm.nvim',
     config = function()
-      require "extensions.toggleterm"
+      require "extensions.terminal"
     end
   },
 -- }}}
 
--- Cursorline {{{
+-- Cursorline -> NvimCursorline {{{
   {
     'yamatsum/nvim-cursorline',
     config = function()
-      require "extensions.nvim-cursorline"
+      require "extensions.cursorline"
     end
   },
 -- }}}
 
--- Utilities -> Window-Picker {{{
+-- Utilities -> NvimWindowPicker {{{
   {
     's1n7ax/nvim-window-picker',
     name = 'window-picker',
@@ -248,7 +246,7 @@ return {
   },
 -- }}}
 
--- Utilities -> QuickMove {{{
+-- Utilities -> Hop & acceleratedJK {{{
   {
     'phaazon/hop.nvim',
     branch = "v2",
@@ -332,7 +330,7 @@ return {
       cmd [[silent! GoInstallDeps]]
     end,
     config = function ()
-      require "extensions.gopher"
+      require("gopher").setup{}
     end
   },
 
