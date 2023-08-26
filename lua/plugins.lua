@@ -44,6 +44,7 @@ return {
       "nvim-lua/plenary.nvim",
       "ahmedkhalf/project.nvim",
       'nvim-lua/popup.nvim',
+      "ahmedkhalf/project.nvim",
     },
     config = function()
       require "extensions.ctelescope"
@@ -133,7 +134,7 @@ return {
     lazy = false,
     dependencies = "nvim-tree/nvim-web-devicons",
     config = function()
-      require "extensions.trouble"
+      require("trouble").setup{}
     end,
   },
   -- }}}
@@ -207,7 +208,7 @@ return {
   {
     'simrat39/symbols-outline.nvim',
     config = function()
-      require "extensions.symbols-outline"
+      require("symbols-outline").setup{}
     end
   },
 
@@ -228,7 +229,7 @@ return {
     'phaazon/hop.nvim',
     branch = "v2",
     config = function()
-      require "extensions.hop"
+      require("hop").setup{}
     end
   },
   -- }}}
@@ -246,7 +247,7 @@ return {
   {
     "windwp/nvim-autopairs",
     config = function ()
-      require "extensions.nvim-autopairs"
+      require("nvim-autopairs").setup{}
     end
   },
   -- }}}
@@ -313,14 +314,15 @@ return {
 },
 -- }}}
 
--- Utiities - projectView {{{
+-- Utiities - BetterEscape {{{
 {
-  "ahmedkhalf/project.nvim",
+  "max397574/better-escape.nvim",
   config = function()
-    require("project_nvim").setup{}
-  end
+    require"extensions.better-escape"
+  end,
 },
 -- }}}
+
 
 }
 
