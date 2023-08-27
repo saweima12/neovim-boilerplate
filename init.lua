@@ -11,7 +11,7 @@ require "settings"
 
 -- Plugin management {{{
 local lazy = require("lazy")
-lazy.setup("plugins")
+lazy.setup("plugins-list")
 -- }}}
 
 require "keybindings"

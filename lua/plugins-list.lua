@@ -96,7 +96,7 @@ return {
       "MunifTanjim/nui.nvim",
     },
     config = function()
-      require "extensions.explorer"
+      require "plugins.neotree"
     end
   },
 -- }}}
@@ -112,7 +112,7 @@ return {
       "ahmedkhalf/project.nvim",
     },
     config = function()
-      require "extensions.fuzzyfinder"
+      require "plugins.ctelescope"
     end
   },
 -- }}}
@@ -122,7 +122,7 @@ return {
     'lewis6991/gitsigns.nvim',
     lazy = false,
     config = function()
-      require "extensions.gitsigns"
+      require "plugins.gitsigns"
     end
   },
 -- }}}
@@ -145,7 +145,7 @@ return {
     build = ":TSUpdate",
     event = { "BufReadPost", "BufNewFile" },
     config = function()
-      require "extensions.treesitter"
+      require "plugins.treesitter"
     end
   },
 -- }}}
@@ -155,7 +155,7 @@ return {
     "sainnhe/edge",
     lazy = false,
     config = function()
-      require "extensions.colorscheme.edge"
+      require "plugins.colorscheme.edge"
     end
   },
 -- }}}
@@ -166,7 +166,7 @@ return {
     'glepnir/dashboard-nvim',
     event = 'VimEnter',
     config = function()
-      require("extensions.dashboard")
+      require("plugins.dashboard")
     end,
     dependencies = { 'nvim-tree/nvim-web-devicons' }
   },
@@ -177,7 +177,7 @@ return {
     "nvim-lualine/lualine.nvim",
     requires = { 'nvim-tree/nvim-web-devicons', opt = true },
     config = function()
-      require "extensions.statusline"
+      require "plugins.lualine"
     end
   },
 -- }}}
@@ -189,7 +189,7 @@ return {
    },
    version = "^1.6.5",
    config = function()
-     require "extensions.tabline"
+     require "plugins.barbar"
    end
   },
 -- }}}
@@ -216,7 +216,7 @@ return {
   {
     "folke/which-key.nvim",
     config = function()
-      require "extensions.which-key"
+      require "plugins.which-key"
     end
   },
 -- }}}
@@ -232,7 +232,7 @@ return {
   {
     'akinsho/toggleterm.nvim',
     config = function()
-      require "extensions.terminal"
+      require "plugins.terminal"
     end
   },
 -- }}}
@@ -241,7 +241,7 @@ return {
   {
     'yamatsum/nvim-cursorline',
     config = function()
-      require "extensions.cursorline"
+      require "plugins.cursorline"
     end
   },
 -- }}}
@@ -253,7 +253,7 @@ return {
     event = 'VeryLazy',
     version = '2.*',
     config = function()
-      require('extensions.window-picker')
+      require('plugins.window-picker')
     end,
   },
 -- }}}
@@ -318,7 +318,7 @@ return {
   {
     "max397574/better-escape.nvim",
     config = function()
-      require"extensions.better-escape"
+      require"plugins.better-escape"
     end,
   },
 -- }}}
@@ -329,6 +329,9 @@ return {
    dependencies = {
     "nvim-lua/plenary.nvim"
    },
+   config = function()
+     require("plugins.spectre")
+   end
  },
 -- }}}
 
@@ -346,7 +349,7 @@ return {
     "rcarriga/nvim-notify",
   },
   config = function()
-    require("extensions.noice")
+    require("plugins.noice")
   end
 },
 -- }}}
