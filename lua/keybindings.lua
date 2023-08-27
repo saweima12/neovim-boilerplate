@@ -82,7 +82,8 @@ nm('<leader>o', '<cmd>SymbolsOutline<CR>')
 -- }}}
 
 -- Motion Hop {{{
-nm("<leader>m", "<cmd>HopChar1<CR>")
+nm("<leader>j", "<cmd>HopChar2AC<CR>")
+nm("<leader>k", "<cmd>HopChar2BC<CR>")
 -- }}}
 
 -- Git {{{
