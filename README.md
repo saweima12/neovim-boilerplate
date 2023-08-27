@@ -70,7 +70,7 @@ My neovim configuration file, cloned from [tokiory/neovim-boilerplate](https://g
 - [which-key](https://github.com/folke/which-key.nvim)
 - [project.nvim](https://github.com/ahmedkhalf/project.nvim)
 - [todo-comments.nvim](https://github.com/folke/todo-comments.nvim)
-- [muren.nvim](https://github.com/AckslD/muren.nvim)
+- [nvim-spectre](https://github.com/nvim-pack/nvim-spectre)
 - [JABS.nvim](https://github.com/matbme/JABS.nvim)
 - [nvim-window-picker](https://github.com/s1n7ax/nvim-window-picker)
 - [accelerated-jk.nvim](https://github.com/rainbowhxch/accelerated-jk.nvim)

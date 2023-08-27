@@ -160,16 +160,7 @@ return {
   },
 -- }}}
 
--- Session & Dashboard {{{
-  {
-    "olimorris/persisted.nvim",
-    requires = {
-      "nvim-telescope/telescope.nvim",
-    },
-    config = function()
-      require("extensions.sessions")
-    end
-  },
+-- Dashboard {{{
 
   {
     'glepnir/dashboard-nvim',
@@ -333,11 +324,12 @@ return {
 -- }}}
 
 -- Utilities -> SearchRelace {{{
-  {
-    'AckslD/muren.nvim',
-    config = true,
-  },
-
+ {
+   "nvim-pack/nvim-spectre",
+   dependencies = {
+    "nvim-lua/plenary.nvim"
+   },
+ },
 -- }}}
 
 -- Improve UI {{{
