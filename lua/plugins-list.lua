@@ -232,7 +232,7 @@ return {
   {
     'akinsho/toggleterm.nvim',
     config = function()
-      require "plugins.terminal"
+      require "plugins.ctoggleterm"
     end
   },
 -- }}}
@@ -349,7 +349,7 @@ return {
     "rcarriga/nvim-notify",
   },
   config = function()
-    require("plugins.noice")
+    require("plugins.cnoice")
   end
 },
 -- }}}
