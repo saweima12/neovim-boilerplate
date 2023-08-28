@@ -21,6 +21,7 @@ vim.wo.wrap = false
 vim.o.sessionoptions = "buffers,curdir,folds,globals,tabpages,winpos,winsize"
 opt.hidden = true
 opt.number = true
+opt.autoread = true
 opt.relativenumber = true
 -- }}}
 
