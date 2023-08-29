@@ -80,7 +80,7 @@ return {
 -- Null-ls {{{
   {
     "jose-elias-alvarez/null-ls.nvim",
-    requires = { "nvim-lua/plenary.nvim" },
+    dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
       require "clsp.null-ls"
     end
@@ -175,7 +175,7 @@ return {
 -- StatusLine -> Lualine {{{
   {
     "nvim-lualine/lualine.nvim",
-    requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
       require "plugins.lualine"
     end
@@ -357,7 +357,7 @@ return {
 -- Gopher {{{
   {
     "olexsmir/gopher.nvim",
-    requires = { -- dependencies
+    dependencies = { -- dependencies
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
     },
