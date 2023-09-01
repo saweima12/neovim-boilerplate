@@ -1,3 +1,11 @@
+--[[
+  File: neotree.lua
+  Description: Configuration of neo-tree
+  See: https://github.com/nvim-neo-tree/neo-tree.nvim)
+]]
+
+require "helpers.keyboard"
+
 local neotree = require("neo-tree")
 
 neotree.setup({
@@ -18,3 +26,5 @@ neotree.setup({
   },
 })
 
+-- # Register keybind
+nm('<leader><leader>', '<cmd>Neotree toggle reveal left<CR>') -- Toggle file explorer

@@ -4,7 +4,7 @@
   See: https://github.com/s1n7ax/nvim-window-picker
 ]]
 
-require "helpers/keyboard"
+require "helpers.keyboard"
 
 local picker = require("window-picker")
 picker.setup{}

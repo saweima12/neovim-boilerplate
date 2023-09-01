@@ -1,0 +1,39 @@
+-- Initialize ColorSchema
+require "plugins.colorscheme.edge"
+
+-- Initialzie plugin conifg.
+require "plugins.config.barbar"
+require "plugins.config.better-escape"
+require "plugins.config.cnoice"
+require "plugins.config.ctoggleterm"
+require "plugins.config.ctelescope"
+require "plugins.config.cursorline"
+require "plugins.config.dashboard"
+require "plugins.config.gitsigns"
+require "plugins.config.lualine"
+require "plugins.config.neotree"
+require "plugins.config.spectre"
+require "plugins.config.treesitter"
+require "plugins.config.which-key"
+require "plugins.config.window-picker"
+
+-- Initialize extension terminal
+require "plugins.terminal.lazygit"
+
+-- Initialize plugin setup
+require("trouble").setup{}
+require("jabs").setup{}
+require("symbols-outline").setup()
+require("nvim-cursorline").setup{}
+require("hop").setup{}
+require("nvim-autopairs").setup {}
+require("lsp-inlayhints").setup{}
+require("dap-go").setup{}
+
+-- Initialize mini plugin
+require("mini.indentscope").setup{}
+require("mini.surround").setup{}
+require("mini.bracketed").setup{}
+require("mini.move").setup{}
+require("mini.comment").setup{}
+

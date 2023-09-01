@@ -20,4 +20,3 @@ toggleterm.setup {
   shell = vim.o.shell, -- change the default shell
 }
 
-require "plugins.terminal.lazygit"

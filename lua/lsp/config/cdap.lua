@@ -1,4 +1,4 @@
-require("helpers/keyboard")
+require("helpers.keyboard")
 
 -- Setup dap
 local dap = require("dap")
@@ -14,13 +14,13 @@ end
 
 dap.listeners.before.event_terminated["dapui_config"] = function()
     dapui.close()
-    vim.cmd("Neotree reveal force")
+    vim.cmd("Neotree reveal")
 end
 
 
 dap.listeners.before.event_exited["dapui_config"] = function()
     dapui.close()
-    vim.cmd("Neotree reveal force")
+    vim.cmd("Neotree reveal")
 end
 
 vim.api.nvim_create_autocmd('LspAttach', {
