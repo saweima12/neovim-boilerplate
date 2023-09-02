@@ -29,6 +29,7 @@ require("hop").setup{}
 require("nvim-autopairs").setup {}
 require("lsp-inlayhints").setup{}
 require("dap-go").setup{}
+require("neodev").setup{}
 
 -- Initialize mini plugin
 require("mini.indentscope").setup{}

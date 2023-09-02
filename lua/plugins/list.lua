@@ -7,229 +7,228 @@
 require "helpers.globals"
 
 return {
-  -- Mason
-  {
-    "williamboman/mason.nvim",
-    build = ":MasonUpdate",
-    dependencies = {
-      "williamboman/mason-lspconfig.nvim",
-      "neovim/nvim-lspconfig",
-    }
+-- # Theme {{{
+{ "sainnhe/edge" },
+-- }}} 
+
+-- # LSP {{{
+-- Language server protocol support.
+
+-- LspInstaller -> Mason
+{
+  "williamboman/mason.nvim",
+  build = ":MasonUpdate",
+  dependencies = {
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+  }
+},
+
+
+-- Autocomplete -> Cmp
+{
+  'hrsh7th/nvim-cmp',
+  event = "InsertEnter",
+  dependencies = {
+    'L3MON4D3/LuaSnip',
+    'saadparwaiz1/cmp_luasnip',
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-path',
+    'hrsh7th/cmp-emoji',
+    'hrsh7th/cmp-nvim-lsp-signature-help',
+    'hrsh7th/cmp-nvim-lua',
+    'rafamadriz/friendly-snippets',
   },
+},
 
--- LSP & Cmp & Dap
-  {
-    'hrsh7th/nvim-cmp',
-    event = "InsertEnter",
-    dependencies = {
-      'L3MON4D3/LuaSnip',
-      'saadparwaiz1/cmp_luasnip',
-      'hrsh7th/cmp-nvim-lsp',
-      'hrsh7th/cmp-path',
-      'hrsh7th/cmp-emoji',
-      'hrsh7th/cmp-nvim-lsp-signature-help',
-      'hrsh7th/cmp-nvim-lua',
-      'rafamadriz/friendly-snippets',
-    },
+-- Fileformater -> Null-ls
+{
+  "jose-elias-alvarez/null-ls.nvim",
+  dependencies = { "nvim-lua/plenary.nvim" },
+},
+
+-- Debugger -> Dap
+{
+  'mfussenegger/nvim-dap',
+  dependencies = {
+    'theHamsta/nvim-dap-virtual-text',
+    "rcarriga/nvim-dap-ui",
   },
+},
 
-  {
-    "jose-elias-alvarez/null-ls.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
-  },
+-- Tips & Extension 
+{
+  'onsails/lspkind-nvim',
+  lazy = true,
+},
 
+{
+  "lvimuser/lsp-inlayhints.nvim",
+  lazy = true,
+  branch = "anticonceal",
+},
 
-  {
-    'mfussenegger/nvim-dap',
-    dependencies = {
-      'theHamsta/nvim-dap-virtual-text',
-      "rcarriga/nvim-dap-ui",
-    },
-  },
+{'leoluz/nvim-dap-go' },
 
-  {
-    'onsails/lspkind-nvim',
-    lazy = true,
-  },
+-- }}}
 
-  {
-    "lvimuser/lsp-inlayhints.nvim",
-    lazy = true,
-    branch = "anticonceal",
-  },
-
-  {'leoluz/nvim-dap-go' },
-
-
+-- # UI Extension {{{
 -- Explorer -> NeoTree 
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "MunifTanjim/nui.nvim",
-    },
+{
+  "nvim-neo-tree/neo-tree.nvim",
+  branch = "v3.x",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "MunifTanjim/nui.nvim",
   },
+},
 
 -- Finder -> Telescope
-  {
-    'nvim-telescope/telescope.nvim',
-    tag = '0.1.2',
-    lazy = false,
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      'nvim-lua/popup.nvim',
-      "ahmedkhalf/project.nvim",
-    },
+{
+  'nvim-telescope/telescope.nvim',
+  tag = '0.1.2',
+  lazy = false,
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    'nvim-lua/popup.nvim',
+    "ahmedkhalf/project.nvim",
   },
-
--- GitSigns
-  {
-    'lewis6991/gitsigns.nvim',
-    lazy = false,
-  },
-
--- Trouble
-  {
-    "folke/trouble.nvim",
-    lazy = false,
-    dependencies = "nvim-tree/nvim-web-devicons",
-  },
-
--- TreeSitter -> Nvim-Treesitter
-  {
-    "nvim-treesitter/nvim-treesitter",
-    lazy = false,
-    build = ":TSUpdate",
-    event = { "BufReadPost", "BufNewFile" },
-  },
-
--- Theme -> Edge 
-  {
-    "sainnhe/edge",
-    lazy = false,
-  },
+},
 
 -- Dashboard 
-  {
-    'glepnir/dashboard-nvim',
-    event = 'VimEnter',
-    dependencies = { 'nvim-tree/nvim-web-devicons' }
-  },
+{
+  'glepnir/dashboard-nvim',
+  event = 'VimEnter',
+  dependencies = { 'nvim-tree/nvim-web-devicons' }
+},
 
 -- StatusLine -> Lualine 
-  {
-    "nvim-lualine/lualine.nvim",
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
-  },
-
+{
+  "nvim-lualine/lualine.nvim",
+  dependencies = { 'nvim-tree/nvim-web-devicons' },
+},
 -- Tabline -> Barbar 
-  {
-   'romgrk/barbar.nvim',
-   dependencies = {
-   },
-   version = "^1.6.5",
-  },
-
+{ 'romgrk/barbar.nvim',   version = "^1.6.5" },
 -- BufferView -> JABS 
-  { 'matbme/JABS.nvim' },
-
+{ 'matbme/JABS.nvim' },
 -- Outline -> SymbolsOutline
-  {
-    'simrat39/symbols-outline.nvim',
-  },
-
+{ 'simrat39/symbols-outline.nvim'} ,
 -- KeyTips -> WhichKeys 
-  {
-    "folke/which-key.nvim",
-  },
+{ "folke/which-key.nvim" },
+-- MessagePanel -> Trouble
+{
+  "folke/trouble.nvim", 
+  dependencies = "nvim-tree/nvim-web-devicons",
+},
+-- SearchReplace -> Spectre
+{
+ "nvim-pack/nvim-spectre",
+ dependencies = "nvim-lua/plenary.nvim",
+},
 
--- TodoList -> TodoComments
-  {
-    "folke/todo-comments.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
-  },
+-- DiffView -> Telescope-diff & Diffview
+{
+  "jemag/telescope-diff.nvim",
+  dependencies = "nvim-telescope/telescope.nvim"
+},
+{ "sindrets/diffview.nvim" },
+
 
 -- Terminal -> ToggleTerm 
-  {'akinsho/toggleterm.nvim' },
+{'akinsho/toggleterm.nvim' },
 
--- Cursorline -> NvimCursorline 
-  {'yamatsum/nvim-cursorline' },
 
--- Utilities -> NvimWindowPicker
-  {
-    's1n7ax/nvim-window-picker',
-    name = 'window-picker',
-    event = 'VeryLazy',
-    version = '2.*',
+-- TodoList -> TodoComments
+{
+  "folke/todo-comments.nvim",
+  dependencies =  "nvim-lua/plenary.nvim" ,
+},
+
+-- Notify -> Noice
+{
+  "folke/noice.nvim",
+  event = "VeryLazy",
+  dependencies = {
+    "MunifTanjim/nui.nvim",
+    "rcarriga/nvim-notify",
   },
-
--- Utilities -> Hop & acceleratedJK 
-  {
-    'phaazon/hop.nvim',
-    branch = "v2",
-  },
-
-  {'rainbowhxch/accelerated-jk.nvim' },
-
--- Utilities -> Nvim-AutoParis
-  {
-    "windwp/nvim-autopairs",
-  },
-
--- Utilities -> Mini.nvim 
-  {'echasnovski/mini.indentscope', version = '*' },
-  {'echasnovski/mini.surround', version = '*' },
-  {'echasnovski/mini.bracketed', version = '*' },
-  {'echasnovski/mini.move', version = '*' },
-  {'echasnovski/mini.comment', version = '*' },
-
--- Utilities -> BetterEscape
-  {"max397574/better-escape.nvim" },
-
--- Utilities -> SearchReplace 
- {
-   "nvim-pack/nvim-spectre",
-   dependencies = {
-    "nvim-lua/plenary.nvim"
-   },
- },
-
--- Utilities -> DiffView
-  {"sindrets/diffview.nvim" },
-  {
-    "jemag/telescope-diff.nvim",
-    dependencies = {
-      { "nvim-telescope/telescope.nvim" },
-    }
-  },
+},
 
 -- Improve UI 
-  { 'stevearc/dressing.nvim' },
-  {
-    "folke/noice.nvim",
-    event = "VeryLazy",
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "rcarriga/nvim-notify",
-    },
-  },
+{ 'stevearc/dressing.nvim' },
+
+-- }}}
+
+-- # Utilities {{{
+
+-- GitTips -> GitSigns
+{ 'lewis6991/gitsigns.nvim' },
+
+-- TreeSitter -> Nvim-Treesitter
+{
+  "nvim-treesitter/nvim-treesitter",
+  lazy = false,
+  build = ":TSUpdate",
+  event = { "BufReadPost", "BufNewFile" },
+},
+
+-- Cursorline -> NvimCursorline 
+{'yamatsum/nvim-cursorline' },
+
+-- Utilities -> NvimWindowPicker
+{
+  's1n7ax/nvim-window-picker',
+  name = 'window-picker',
+  event = 'VeryLazy',
+  version = '2.*',
+},
+
+-- Utilities -> Hop & acceleratedJK 
+{
+  'phaazon/hop.nvim',
+  branch = "v2",
+},
+
+{'rainbowhxch/accelerated-jk.nvim' },
+
+-- Utilities -> Nvim-AutoParis
+{
+  "windwp/nvim-autopairs",
+},
+
+-- Utilities -> Mini.nvim 
+{'echasnovski/mini.indentscope', version = '*' },
+{'echasnovski/mini.surround', version = '*' },
+{'echasnovski/mini.bracketed', version = '*' },
+{'echasnovski/mini.move', version = '*' },
+{'echasnovski/mini.comment', version = '*' },
+
+-- Utilities -> BetterEscape
+{"max397574/better-escape.nvim" },
 
 
--- Gopher  
-  {
-    "olexsmir/gopher.nvim",
-    dependencies = { -- dependencies
-      "nvim-lua/plenary.nvim",
-      "nvim-treesitter/nvim-treesitter",
-    },
-    build = function ()
-      cmd [[silent! GoInstallDeps]]
-    end,
-  },
+-- }}}
 
-  { 'edolphin-ydf/goimpl.nvim' },
+-- Golang improve {{{
+{
+  "olexsmir/gopher.nvim",
+  dependencies = { -- dependencies
+  "nvim-lua/plenary.nvim",
+  "nvim-treesitter/nvim-treesitter",
+},
+build = function ()
+  cmd [[silent! GoInstallDeps]]
+end,
+},
 
+{ 'edolphin-ydf/goimpl.nvim' },
+
+
+-- }}}
+
+-- # NeovimLua {{{
+{ "folke/neodev.nvim", opts = {} }
+-- }}}
 
 }
 

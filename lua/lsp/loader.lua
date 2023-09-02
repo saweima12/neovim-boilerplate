@@ -10,12 +10,14 @@ local lspconfig = require("lspconfig")
 local mason_lspconfig = require("mason-lspconfig")
 
 -- Setup every needed language server in lspconfig
+local lspext_ptn = "lsp.lspext.%s"
+
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 mason_lspconfig.setup_handlers {
   function (server_name)
     local opt = { capabilities = capabilities }
     -- try to loading language extension.
-    local require_path = string.format("clsp.lspext.%s", server_name)
+    local require_path = string.format(lspext_ptn, server_name)
     local ok, ext = pcall(require, require_path)
     if ok and (type(ext) == "table") then
       opt = vim.tbl_extend("force", opt, ext)
