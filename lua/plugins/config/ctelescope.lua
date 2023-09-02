@@ -10,7 +10,7 @@ require("project_nvim").setup{
   manual_mode = true
 }
 
-telescope.setup()
+telescope.setup{}
 telescope.load_extension('projects')
 telescope.load_extension("diff")
 
