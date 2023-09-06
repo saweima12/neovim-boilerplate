@@ -29,7 +29,7 @@ nm('<leader>xx', '<cmd>TroubleToggle<CR>')   -- Show all problems in project (wi
 nm('<leader>xe', '<cmd>TroubleToggle workspace_diagnostics<CR>')   -- Show all problems in project (with help of LSP)
 nm('<leader>xc', '<cmd>TroubleClose<CR>')   -- Show all problems in project (with help of LSP)
 nm('gr', '<cmd>TroubleToggle lsp_references<CR>') -- Show use of object in project
-nm('gv', '<cmd>lua vim.diagnostic.open_float()<CR>') -- Show use of object in project
+nm('gv', '<cmd>Lspsaga show_cursor_diagnostics<CR>') -- Show use of object in project
 -- }}}
 
 -- Outline -> SymbolsOutline 
