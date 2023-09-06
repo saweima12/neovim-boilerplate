@@ -13,7 +13,7 @@ require("project_nvim").setup{
 telescope.setup{}
 telescope.load_extension('projects')
 telescope.load_extension("diff")
-
+telescope.load_extension("yaml_schema")
 
 -- Register keybinds
 nm('<leader>tp', '<cmd>Telescope projects<CR>')              -- Show recent files

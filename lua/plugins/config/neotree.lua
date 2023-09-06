@@ -27,4 +27,7 @@ neotree.setup({
 })
 
 -- # Register keybind
-nm('<leader><leader>', '<cmd>Neotree toggle reveal left<CR>') -- Toggle file explorer
+vim.keymap.set("n", "<leader><leader>", 
+  '<cmd>Neotree toggle reveal left<CR>', 
+  {desc = "Neotree"}
+)-- Toggle file explorer

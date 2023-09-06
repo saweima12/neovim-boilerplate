@@ -70,6 +70,22 @@ return {
 
 {'leoluz/nvim-dap-go' },
 
+{
+  'nvimdev/lspsaga.nvim',
+  dependencies = {
+      'nvim-treesitter/nvim-treesitter', -- optional
+      'nvim-tree/nvim-web-devicons'     -- optional
+  }
+},
+
+{
+  "someone-stole-my-name/yaml-companion.nvim",
+  dependencies = {
+    "neovim/nvim-lspconfig",
+    "nvim-lua/plenary.nvim",
+    "nvim-telescope/telescope.nvim",
+  }
+},
 -- }}}
 
 -- # UI Extension {{{
@@ -117,7 +133,7 @@ return {
 { "folke/which-key.nvim" },
 -- MessagePanel -> Trouble
 {
-  "folke/trouble.nvim", 
+  "folke/trouble.nvim",
   dependencies = "nvim-tree/nvim-web-devicons",
 },
 -- SearchReplace -> Spectre
@@ -183,12 +199,8 @@ return {
   version = '2.*',
 },
 
--- Utilities -> Hop & acceleratedJK 
-{
-  'phaazon/hop.nvim',
-  branch = "v2",
-},
-
+-- Utilities -> Flash & acceleratedJK 
+{ "folke/flash.nvim", event = "VeryLazy"},
 {'rainbowhxch/accelerated-jk.nvim' },
 
 -- Utilities -> Nvim-AutoParis
@@ -206,10 +218,9 @@ return {
 -- Utilities -> BetterEscape
 {"max397574/better-escape.nvim" },
 
-
 -- }}}
 
--- Golang improve {{{
+-- # Golang improve {{{
 {
   "olexsmir/gopher.nvim",
   dependencies = { -- dependencies

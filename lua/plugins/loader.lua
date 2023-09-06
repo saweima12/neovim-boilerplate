@@ -16,6 +16,8 @@ require "plugins.config.spectre"
 require "plugins.config.treesitter"
 require "plugins.config.which-key"
 require "plugins.config.window-picker"
+require "plugins.config.mini"
+require "plugins.config.cflash"
 
 -- Initialize extension terminal
 require "plugins.terminal.lazygit"
@@ -25,16 +27,8 @@ require("trouble").setup{}
 require("jabs").setup{}
 require("symbols-outline").setup()
 require("nvim-cursorline").setup{}
-require("hop").setup{}
 require("nvim-autopairs").setup {}
 require("lsp-inlayhints").setup{}
 require("dap-go").setup{}
 require("neodev").setup{}
-
--- Initialize mini plugin
-require("mini.indentscope").setup{}
-require("mini.surround").setup{}
-require("mini.bracketed").setup{}
-require("mini.move").setup{}
-require("mini.comment").setup{}
 

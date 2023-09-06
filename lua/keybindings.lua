@@ -35,10 +35,6 @@ nm('gv', '<cmd>lua vim.diagnostic.open_float()<CR>') -- Show use of object in pr
 -- Outline -> SymbolsOutline 
 nm('<leader>o', '<cmd>SymbolsOutline<CR>')
 
--- Motion -> Hop
-nm("<leader>j", "<cmd>HopChar2AC<CR>")
-nm("<leader>k", "<cmd>HopChar2BC<CR>")
-
 -- BufferView -> JABS 
 nm('<leader>p', '<cmd>JABSOpen<CR>')
 

@@ -1,3 +1,4 @@
+---@diagnostic disable: missing-fields
 --[[
   File: cmp.lua
   Description: CMP plugin configuration (with lspconfig)
@@ -14,6 +15,14 @@ cmp.setup{
     end,
   },
 
+  window = {
+    completion = cmp.config.window.bordered{},
+    documentation = cmp.config.window.bordered {
+      documentation = {
+        border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+      },
+    },
+  },
 
   -- Mappings for cmp
   mapping = {

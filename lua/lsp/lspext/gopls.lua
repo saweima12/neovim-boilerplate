@@ -4,10 +4,13 @@ local telescope = require("telescope")
 local result = {}
 
 result.on_attach = function(client, bufnr)
+  
+  require"lsp.config.clspsaga"
   -- load telescope extension.
   telescope.load_extension('goimpl')
 
   -- Add inlayhints support.
+
   require("lsp-inlayhints").on_attach(client, bufnr, false)
   cmd [[hi default LspInlayHint guifg=#758094 guibg=#3a3a4e]]
 
