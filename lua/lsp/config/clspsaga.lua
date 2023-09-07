@@ -1,3 +1,8 @@
 local saga = require("lspsaga")
 
-saga.setup{}
+saga.setup{
+
+  lightblub = {
+    sign = false,
+  }
+}
