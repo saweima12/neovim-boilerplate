@@ -1,8 +1,8 @@
 local saga = require("lspsaga")
 
 saga.setup{
-
-  lightblub = {
+  lightbulb = {
+    enable = false,
     sign = false,
   }
 }

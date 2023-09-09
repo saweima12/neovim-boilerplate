@@ -127,5 +127,6 @@
         "/home/tassis/.config/nvim/lua",
         "/home/tassis/.config/nvim/lua",
         "${3rd}/luv/library"
-    ]
+    ],
+    "workspace.checkThirdParty": false
 }

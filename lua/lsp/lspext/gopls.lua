@@ -4,7 +4,7 @@ local telescope = require("telescope")
 local result = {}
 
 result.on_attach = function(client, bufnr)
-  
+
   require"lsp.config.clspsaga"
   -- load telescope extension.
   telescope.load_extension('goimpl')
