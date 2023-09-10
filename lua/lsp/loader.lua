@@ -50,7 +50,7 @@ mason_lspconfig.setup_handlers {
 nm('K', '<cmd>lua vim.lsp.buf.hover()<CR>')            -- Hover object
 nm('ga', '<cmd>lua vim.lsp.buf.code_action()<CR>')     -- Code actions
 nm('gR', '<cmd>lua vim.lsp.buf.rename()<CR>')          -- Rename an object
-nm('gD', '<cmd>lua vim.lsp.buf.declaration()<cr>')     -- Go to declaration
-nm('gd', '<cmd>lua vim.lsp.buf.definition()<CR>')      -- Goto declarationa
-nm('gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')  -- Goto declarationa
+nm('gD', '<cmd>lua vim.lsp.buf.declaration()<cr>', { desc = "Go to declaration"})     -- Go to declaration
+nm('gd', '<cmd>lua vim.lsp.buf.definition()<CR>', { desc = "Go to definition"})      -- Goto declarationa
+nm('gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', { desc = "Go to implementation"})  -- Goto implementation
 

@@ -1,23 +1,33 @@
 -- Alias for function, that set new keybindings
 local map = vim.api.nvim_set_keymap
 
+local default_opt = { noremap = true }
+
 -- Normal mode keybinding setter
-function nm(key, command)
-  map('n', key, command, { noremap = true })
+function nm(key, command, opts)
+  opts = opts or {}
+  opts = vim.tbl_extend("force", default_opt, opts)
+  map('n', key, command, opts)
 end
 
 -- Input mode keybinding setter
-function im(key, command)
+function im(key, command, opts)
+  opts = opts or {}
+  opts = vim.tbl_extend("force", default_opt, opts)
   map('i', key, command, { noremap = true })
 end
 
 -- Visual mode keybinding setter
-function vm(key, command)
+function vm(key, command, opts)
+  opts = opts or {}
+  opts = vim.tbl_extend("force", default_opt, opts)
   map('v', key, command, { noremap = true })
 end
 
 -- Terminal mode keybinding setter
-function tm(key, command)
+function tm(key, command, opts)
+  opts = opts or {}
+  opts = vim.tbl_extend("force", default_opt, opts)
   map('t', key, command, { noremap = true })
 end
 
