@@ -124,7 +124,7 @@ return {
   dependencies = { 'nvim-tree/nvim-web-devicons' },
 },
 -- Tabline -> Barbar 
-{ 'romgrk/barbar.nvim',   version = "^1.6.5" },
+-- { 'romgrk/barbar.nvim',   version = "^1.6.5" },
 -- BufferView -> JABS 
 { 'matbme/JABS.nvim' },
 -- Outline -> SymbolsOutline

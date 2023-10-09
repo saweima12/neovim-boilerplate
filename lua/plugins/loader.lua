@@ -2,7 +2,7 @@
 require "plugins.colorscheme.edge"
 
 -- Initialzie plugin conifg.
-require "plugins.config.barbar"
+-- require "plugins.configbarbar"
 require "plugins.config.better-escape"
 require "plugins.config.cnoice"
 require "plugins.config.ctoggleterm"
