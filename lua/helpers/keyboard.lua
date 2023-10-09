@@ -14,20 +14,20 @@ end
 function im(key, command, opts)
   opts = opts or {}
   opts = vim.tbl_extend("force", default_opt, opts)
-  map('i', key, command, { noremap = true })
+  map('i', key, command, opts)
 end
 
 -- Visual mode keybinding setter
 function vm(key, command, opts)
   opts = opts or {}
   opts = vim.tbl_extend("force", default_opt, opts)
-  map('v', key, command, { noremap = true })
+  map('v', key, command, opts)
 end
 
 -- Terminal mode keybinding setter
 function tm(key, command, opts)
   opts = opts or {}
   opts = vim.tbl_extend("force", default_opt, opts)
-  map('t', key, command, { noremap = true })
+  map('t', key, command, opts)
 end
 

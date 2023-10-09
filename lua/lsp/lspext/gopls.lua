@@ -19,7 +19,7 @@ result.on_attach = function(client, bufnr)
   vim.keymap.set('n', '<leader>li', "<cmd>Telescope goimpl<CR>", opts)
   vim.keymap.set('n', '<leader>lt', function ()
     addtag_ui.Open()
-  end , opts)
+  end , { buffer = bufnr, desc = "AddTags" })
 end
 
 result.settings = {
