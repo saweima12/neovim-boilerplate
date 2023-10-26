@@ -125,6 +125,9 @@ return {
 },
 -- Tabline -> Barbar 
 -- { 'romgrk/barbar.nvim',   version = "^1.6.5" },
+{'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
+
+
 -- BufferView -> JABS 
 { 'matbme/JABS.nvim' },
 -- Outline -> SymbolsOutline
