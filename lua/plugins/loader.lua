@@ -9,7 +9,10 @@ require "plugins.config.ctoggleterm"
 require "plugins.config.ctelescope"
 require "plugins.config.cursorline"
 require "plugins.config.dashboard"
+
+-- Git support
 require "plugins.config.gitsigns"
+
 require "plugins.config.lualine"
 require "plugins.config.neotree"
 require "plugins.config.spectre"

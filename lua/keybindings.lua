@@ -42,6 +42,7 @@ nm('<leader>p', '<cmd>JABSOpen<CR>')
 nm('<leader>fr', '<cmd>Spectre<CR>')
 
 
-
+-- ToggleGitBlame
+nm("<leader>gb", "<cmd>ToggleBlame virtual<CR>", { desc = "ToggleBlame" } )
 
 -- vim:tabstop=2 shiftwidth=2 expandtab syntax=lua foldmethod=marker foldlevelstart=0 foldlevel=0

@@ -19,6 +19,15 @@ nm('<A-7>', ':BufferLineGoToBuffer 7<CR>')
 nm('<A-8>', ':BufferLineGoToBuffer 8<CR>')
 nm('<A-9>', ':BufferLineGoToBuffer 9<CR>')
 
-nm('<A-c>', ':BufferLinePickClose<CR>')
+nm('<A-c>', function ()
+  MiniBufremove.delete()
+end)
+
+nm('[b', ':BufferLineCyclePrev<CR>')
+nm(']b', ':BufferLineCycleNext<CR>')
+
+nm('[B', ':BufferLineCyclePrev<CR>')
+nm(']B', ':BufferLineCycleNext<CR>')
+-- nm('<A-c>', ':BufferLinePickClose<CR>')
 
 bufferline.setup{}

@@ -4,7 +4,6 @@
   See: https://github.com/lewis6991/gitsigns.nvim
 ]]
 
-require "helpers.keyboard"
 
 local gitsigns = require('gitsigns')
 
@@ -18,5 +17,3 @@ gitsigns.setup({
   },
 })
 
--- Register keybinds
-nm("<leader>gb", "<cmd>Gitsigns blame_line<CR>")

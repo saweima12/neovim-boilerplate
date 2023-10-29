@@ -124,7 +124,7 @@ return {
   dependencies = { 'nvim-tree/nvim-web-devicons' },
 },
 -- Tabline -> Barbar 
--- { 'romgrk/barbar.nvim',   version = "^1.6.5" },
+-- { 'romgrk/barbar.nvim',   version = "^1.7.0" },
 {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
 
 
@@ -182,6 +182,8 @@ return {
 
 -- GitTips -> GitSigns
 { 'lewis6991/gitsigns.nvim' },
+{ "FabijanZulj/blame.nvim" },
+
 
 -- TreeSitter -> Nvim-Treesitter
 {
@@ -214,9 +216,9 @@ return {
 -- Utilities -> Mini.nvim 
 {'echasnovski/mini.indentscope', version = '*' },
 {'echasnovski/mini.surround', version = '*' },
-{'echasnovski/mini.bracketed', version = '*' },
 {'echasnovski/mini.move', version = '*' },
 {'echasnovski/mini.comment', version = '*' },
+{'echasnovski/mini.bufremove', version = '*' },
 
 -- Utilities -> BetterEscape
 {"max397574/better-escape.nvim" },

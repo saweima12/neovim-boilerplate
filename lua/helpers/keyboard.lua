@@ -1,5 +1,5 @@
 -- Alias for function, that set new keybindings
-local map = vim.api.nvim_set_keymap
+local map = vim.keymap.set
 
 local default_opt = { noremap = true }
 

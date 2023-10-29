@@ -4,8 +4,6 @@
   See: https://github.com/romgrk/barbar.nvim
 ]]
 
-
-
 require "helpers.keyboard"
 
 local barbar = require("barbar")
