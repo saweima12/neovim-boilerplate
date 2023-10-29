@@ -23,6 +23,8 @@ im("?", '?<C-g>u')
 nm("<C-f>", "<cmd>noh<CR>")
 -- }}}
 
+-- Create empty buf
+nm("<A-n>", "<cmd>enew<CR>")
 
 -- Trouble {{{
 nm('<leader>xx', '<cmd>TroubleToggle<CR>')   -- Show all problems in project (with help of LSP)
@@ -40,7 +42,6 @@ nm('<leader>p', '<cmd>JABSOpen<CR>')
 
 -- SearchReplace -> Spectre
 nm('<leader>fr', '<cmd>Spectre<CR>')
-
 
 -- ToggleGitBlame
 nm("<leader>gb", "<cmd>ToggleBlame virtual<CR>", { desc = "ToggleBlame" } )
