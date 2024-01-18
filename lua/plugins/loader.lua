@@ -22,6 +22,8 @@ require "plugins.config.window-picker"
 require "plugins.config.mini"
 require "plugins.config.cflash"
 
+require "plugins.config.cgpt"
+
 -- Initialize extension terminal
 require "plugins.terminal.lazygit"
 

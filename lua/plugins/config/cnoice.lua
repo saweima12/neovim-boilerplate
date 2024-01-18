@@ -17,5 +17,10 @@ noice.setup{
     inc_rename = false, -- enables an input dialog for inc-rename.nvim
     lsp_doc_border = false, -- add a border to hover docs and signature help
   },
+  messages = {
+    view = "mini", -- default view for messages
+    view_error = "mini", -- view for errors
+    view_warn = "mini", -- view for warnings
+  },
 }
 
