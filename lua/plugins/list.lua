@@ -194,11 +194,8 @@ return {
 
 -- # Utilities {{{
 
--- Breadcrumb
-{
-    "SmiteshP/nvim-navic",
-},
-
+-- Breadcrumb & finder
+{"glepnir/lspsaga.nvim"},
 
 -- GitTips -> GitSigns
 { 'lewis6991/gitsigns.nvim' },

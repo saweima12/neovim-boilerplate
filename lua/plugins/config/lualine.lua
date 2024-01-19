@@ -20,7 +20,6 @@ local function selection_count()
 end
 
 
-local navic = require("nvim-navic")
 lualine.setup {
   extensions = { "neo-tree", "toggleterm" },
   sections = {
@@ -39,17 +38,4 @@ lualine.setup {
       { selection_count },
     }
   },
-  winbar = {
-    lualine_c = {
-      {
-        function()
-            return navic.get_location()
-        end,
-        cond = function()
-            return navic.is_available()
-        end,
-        draw_empty = true,
-      }
-    },
-  }
 }
