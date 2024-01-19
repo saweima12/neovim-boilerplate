@@ -83,13 +83,6 @@ return {
 
 {'leoluz/nvim-dap-go' },
 
-{
-  'nvimdev/lspsaga.nvim',
-  dependencies = {
-      'nvim-treesitter/nvim-treesitter', -- optional
-      'nvim-tree/nvim-web-devicons'     -- optional
-  }
-},
 
 {
   "someone-stole-my-name/yaml-companion.nvim",

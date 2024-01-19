@@ -31,7 +31,6 @@ nm('<leader>xx', '<cmd>TroubleToggle<CR>')   -- Show all problems in project (wi
 nm('<leader>xe', '<cmd>Trouble workspace_diagnostics<CR>')   -- Show all problems in project (with help of LSP)
 nm('<leader>xc', '<cmd>TroubleClose<CR>')   -- Show all problems in project (with help of LSP)
 nm('gr', '<cmd>Trouble lsp_references<CR>') -- Show use of object in project
-nm('gv', '<cmd>Lspsaga show_cursor_diagnostics<CR>') -- Show use of object in project
 -- }}}
 
 -- Outline -> SymbolsOutline 
