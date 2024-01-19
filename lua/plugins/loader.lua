@@ -30,10 +30,11 @@ require "plugins.terminal.lazygit"
 -- Initialize plugin setup
 require("trouble").setup{}
 require("jabs").setup{}
-require("symbols-outline").setup{}
+require("outline").setup {}
 require("nvim-cursorline").setup{}
 require("nvim-autopairs").setup {}
 require("lsp-inlayhints").setup{}
 require("dap-go").setup{}
 require("neodev").setup{}
 require("todo-comments").setup{}
+require("nvim-navic").setup{}

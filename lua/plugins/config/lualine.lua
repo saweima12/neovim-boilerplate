@@ -19,6 +19,8 @@ local function selection_count()
 	return tostring(lines) .. "L " .. tostring(fn.wordcount().visual_chars) .. "C"
 end
 
+
+local navic = require("nvim-navic")
 lualine.setup {
   extensions = { "neo-tree", "toggleterm" },
   sections = {
@@ -36,5 +38,18 @@ lualine.setup {
       "progress",
       { selection_count },
     }
+  },
+  winbar = {
+    lualine_c = {
+      {
+        function()
+            return navic.get_location()
+        end,
+        cond = function()
+            return navic.is_available()
+        end,
+        draw_empty = true,
+      }
+    },
   }
 }

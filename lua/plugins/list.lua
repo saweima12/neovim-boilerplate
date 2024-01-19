@@ -136,8 +136,16 @@ return {
 
 -- BufferView -> JABS 
 { 'matbme/JABS.nvim' },
--- Outline -> SymbolsOutline
-{ 'simrat39/symbols-outline.nvim'} ,
+-- Outline -> Outline.nvim
+
+{
+  "hedyhli/outline.nvim",
+  lazy= true,
+  config = function()
+    -- Example mapping to toggle outline
+  end,
+},
+
 -- KeyTips -> WhichKeys 
 { "folke/which-key.nvim" },
 -- MessagePanel -> Trouble
@@ -185,6 +193,12 @@ return {
 -- }}}
 
 -- # Utilities {{{
+
+-- Breadcrumb
+{
+    "SmiteshP/nvim-navic",
+},
+
 
 -- GitTips -> GitSigns
 { 'lewis6991/gitsigns.nvim' },

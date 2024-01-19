@@ -1,11 +1,14 @@
 local telescope = require("telescope")
-
+local navic = require("nvim-navic")
 
 local result = {}
 
 result.on_attach = function(client, bufnr)
   -- load telescope extension.
   telescope.load_extension('goimpl')
+
+  -- Add navic support
+  navic.attach(client, bufnr)
 
   -- Add inlayhints support.
   require("lsp-inlayhints").on_attach(client, bufnr, false)
