@@ -23,6 +23,10 @@ nm('<A-c>', function ()
   MiniBufremove.delete()
 end)
 
+nm('<A-S-c>', function()
+  MiniBufremove.delete(0, true)
+end)
+
 nm('[b', ':BufferLineCyclePrev<CR>')
 nm(']b', ':BufferLineCycleNext<CR>')
 

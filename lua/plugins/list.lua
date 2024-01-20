@@ -195,7 +195,10 @@ return {
 -- # Utilities {{{
 
 -- Breadcrumb & finder
-{"glepnir/lspsaga.nvim"},
+{
+  "glepnir/lspsaga.nvim",
+  lazy = true,
+},
 
 -- GitTips -> GitSigns
 { 'lewis6991/gitsigns.nvim' },

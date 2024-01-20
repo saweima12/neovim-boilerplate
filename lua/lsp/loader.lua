@@ -3,13 +3,13 @@ require"lsp.config.cmp"
 require"lsp.config.mason"
 require"lsp.config.null-ls"
 require"lsp.config.clspkind"
+require"lsp.config.clspsaga"
 require"lsp.config.cdap"
 
 -- Setup lspconfig
 local lspconfig = require("lspconfig")
 local mason_lspconfig = require("mason-lspconfig")
 
--- TODO: Custom border
 local border = {
     {"╭", "FloatBorder"},
     {"─", "FloatBorder"},
