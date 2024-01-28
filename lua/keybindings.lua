@@ -34,7 +34,7 @@ nm('gr', '<cmd>Trouble lsp_references<CR>') -- Show use of object in project
 -- }}}
 
 -- Outline -> SymbolsOutline 
-nm('<leader>o', '<cmd>Outline<CR>')
+nm('<leader>o', '<cmd>Lspsaga outline<CR>')
 
 -- BufferView -> JABS 
 nm('<leader>p', '<cmd>JABSOpen<CR>')

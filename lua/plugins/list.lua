@@ -136,15 +136,6 @@ return {
 
 -- BufferView -> JABS 
 { 'matbme/JABS.nvim' },
--- Outline -> Outline.nvim
-
-{
-  "hedyhli/outline.nvim",
-  lazy= true,
-  config = function()
-    -- Example mapping to toggle outline
-  end,
-},
 
 -- KeyTips -> WhichKeys 
 { "folke/which-key.nvim" },
