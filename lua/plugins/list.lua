@@ -56,7 +56,7 @@ return {
 
 -- Fileformater -> Null-ls
 {
-  "jose-elias-alvarez/null-ls.nvim",
+  "nvimtools/none-ls.nvim",
   dependencies = { "nvim-lua/plenary.nvim" },
 },
 
@@ -92,6 +92,8 @@ return {
     "nvim-telescope/telescope.nvim",
   }
 },
+
+{ "nvim-neotest/nvim-nio" },
 -- }}}
 
 -- # UI Extension {{{
@@ -119,7 +121,7 @@ return {
 
 -- Dashboard 
 {
-  'glepnir/dashboard-nvim',
+  'nvimdev/dashboard-nvim',
   event = 'VimEnter',
   dependencies = { 'nvim-tree/nvim-web-devicons' }
 },
@@ -132,10 +134,6 @@ return {
 -- Tabline -> Barbar 
 -- { 'romgrk/barbar.nvim',   version = "^1.7.0" },
 {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
-
-
--- BufferView -> JABS 
-{ 'matbme/JABS.nvim' },
 
 -- KeyTips -> WhichKeys 
 { "folke/which-key.nvim" },
@@ -184,6 +182,10 @@ return {
 -- }}}
 
 -- # Utilities {{{
+{
+  "hedyhli/outline.nvim",
+  lazy = true,
+},
 
 -- Breadcrumb & finder
 {

@@ -49,7 +49,8 @@ mason_lspconfig.setup_handlers {
 nm('K', '<cmd>lua vim.lsp.buf.hover()<CR>')            -- Hover object
 nm('ga', '<cmd>lua vim.lsp.buf.code_action()<CR>')     -- Code actions
 nm('gR', '<cmd>lua vim.lsp.buf.rename()<CR>')          -- Rename an object
+nm('gF', '<cmd>Lspsaga finder<cr>', { desc = "Open finder"})     -- Go to declaration
 nm('gD', '<cmd>lua vim.lsp.buf.declaration()<cr>', { desc = "Go to declaration"})     -- Go to declaration
 nm('gd', '<cmd>lua vim.lsp.buf.definition()<CR>', { desc = "Go to definition"})      -- Goto declarationa
 nm('gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', { desc = "Go to implementation"})  -- Goto implementation
-
+nm('<leader>lh', "<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<CR>", { desc = "Toggle the LspInlayHints" })

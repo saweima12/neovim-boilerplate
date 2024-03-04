@@ -27,22 +27,19 @@ nm("<C-f>", "<cmd>noh<CR>")
 nm("<A-n>", "<cmd>enew<CR>")
 
 -- Trouble {{{
-nm('<leader>xx', '<cmd>TroubleToggle<CR>')   -- Show all problems in project (with help of LSP)
-nm('<leader>xe', '<cmd>Trouble workspace_diagnostics<CR>')   -- Show all problems in project (with help of LSP)
+nm('<leader>xx', '<cmd>Trouble <CR>')   -- Show all problems in project (with help of LSP)
+nm('<leader>xe', '<cmd>Trouble diagnostics toggle focus=true<CR>')   -- Show all problems in project (with help of LSP)
 nm('<leader>xc', '<cmd>TroubleClose<CR>')   -- Show all problems in project (with help of LSP)
 nm('gr', '<cmd>Trouble lsp_references<CR>') -- Show use of object in project
 -- }}}
 
 -- Outline -> SymbolsOutline 
-nm('<leader>o', '<cmd>Lspsaga outline<CR>')
-
--- BufferView -> JABS 
-nm('<leader>p', '<cmd>JABSOpen<CR>')
+nm('<leader>o', '<cmd>Outline<CR>')
 
 -- SearchReplace -> Spectre
 nm('<leader>fr', '<cmd>Spectre<CR>')
 
 -- ToggleGitBlame
-nm("<leader>gb", "<cmd>ToggleBlame virtual<CR>", { desc = "ToggleBlame" } )
+nm("<leader>gb", "<cmd>BlameToggle virtual<CR>", { desc = "ToggleBlame" } )
 
 -- vim:tabstop=2 shiftwidth=2 expandtab syntax=lua foldmethod=marker foldlevelstart=0 foldlevel=0

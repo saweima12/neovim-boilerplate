@@ -10,7 +10,11 @@ require("project_nvim").setup{
   manual_mode = true
 }
 
-telescope.setup{}
+telescope.setup{
+  defaults = {
+    file_ignore_patterns = {"node_modules", "3rd_party" }
+  },
+}
 telescope.load_extension('projects')
 telescope.load_extension("diff")
 telescope.load_extension("yaml_schema")

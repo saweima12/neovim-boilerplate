@@ -2,13 +2,9 @@ local telescope = require("telescope")
 
 local result = {}
 
-result.on_attach = function(client, bufnr)
+result.on_attach = function(_, bufnr)
   -- load telescope extension.
   telescope.load_extension('goimpl')
-
-  -- Add inlayhints support.
-  require("lsp-inlayhints").on_attach(client, bufnr, false)
-  cmd [[hi default LspInlayHint guifg=#758094 guibg=#3a3a4e]]
 
   local addtag_ui = require("lsp.extension.add-tag")
   -- Add extension keybind.
@@ -19,6 +15,13 @@ result.on_attach = function(client, bufnr)
   end , { buffer = bufnr, desc = "AddTags" })
 end
 
+local gopls_env = os.getenv("GOPLS_ENV")
+if gopls_env == nil then
+  gopls_env = "dev"
+end
+
+local tag_str = string.format("-tags=%s", gopls_env)
+
 result.settings = {
    gopls = {
     hints = {
@@ -28,7 +31,8 @@ result.settings = {
       functionTypeParameters = true,
       parameterNames =  true,
       rangeVariableTypes = true
-    }
+    },
+    buildFlags={tag_str},
   }
 }
 
