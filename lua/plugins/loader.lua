@@ -28,6 +28,7 @@ require "plugins.config.cgpt"
 require "plugins.terminal.lazygit"
 
 -- Initialize plugin setup
+require("outline").setup{}
 require("trouble").setup{}
 require("jabs").setup{}
 require("nvim-cursorline").setup{}

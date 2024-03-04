@@ -119,7 +119,7 @@ return {
 
 -- Dashboard 
 {
-  'glepnir/dashboard-nvim',
+  'nvimdev/dashboard-nvim',
   event = 'VimEnter',
   dependencies = { 'nvim-tree/nvim-web-devicons' }
 },
@@ -184,6 +184,10 @@ return {
 -- }}}
 
 -- # Utilities {{{
+{
+  "hedyhli/outline.nvim",
+  lazy = true,
+},
 
 -- Breadcrumb & finder
 {
