@@ -37,3 +37,4 @@ require("lsp-inlayhints").setup{}
 require("dap-go").setup{}
 require("neodev").setup{}
 require("todo-comments").setup{}
+require("blame").setup{}

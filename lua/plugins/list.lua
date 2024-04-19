@@ -92,6 +92,8 @@ return {
     "nvim-telescope/telescope.nvim",
   }
 },
+
+{ "nvim-neotest/nvim-nio" },
 -- }}}
 
 -- # UI Extension {{{
