@@ -13,6 +13,8 @@ cmd [[autocmd FileType * setlocal formatoptions-=cro]]
 
 cmd [[language en_US.UTF-8]]
 
+cmd [[au BufNewFile,BufRead *.jenkinsfile,*.Jenkinsfile,Jenkinsfile,jenkinsfile setf groovy]]
+
 -- Set leader key
 g.mapleader = '\\'
 

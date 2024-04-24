@@ -23,6 +23,7 @@ require "plugins.config.mini"
 require "plugins.config.cflash"
 
 require "plugins.config.cgpt"
+require "plugins.config.blame"
 
 -- Initialize extension terminal
 require "plugins.terminal.lazygit"
@@ -37,4 +38,3 @@ require("lsp-inlayhints").setup{}
 require("dap-go").setup{}
 require("neodev").setup{}
 require("todo-comments").setup{}
-require("blame").setup{}
