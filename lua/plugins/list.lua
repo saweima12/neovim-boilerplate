@@ -135,10 +135,6 @@ return {
 -- { 'romgrk/barbar.nvim',   version = "^1.7.0" },
 {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
 
-
--- BufferView -> JABS 
-{ 'matbme/JABS.nvim' },
-
 -- KeyTips -> WhichKeys 
 { "folke/which-key.nvim" },
 -- MessagePanel -> Trouble
