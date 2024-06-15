@@ -27,8 +27,8 @@ nm("<C-f>", "<cmd>noh<CR>")
 nm("<A-n>", "<cmd>enew<CR>")
 
 -- Trouble {{{
-nm('<leader>xx', '<cmd>TroubleToggle<CR>')   -- Show all problems in project (with help of LSP)
-nm('<leader>xe', '<cmd>Trouble workspace_diagnostics<CR>')   -- Show all problems in project (with help of LSP)
+nm('<leader>xx', '<cmd>Trouble <CR>')   -- Show all problems in project (with help of LSP)
+nm('<leader>xe', '<cmd>Trouble diagnostics toggle focus=true<CR>')   -- Show all problems in project (with help of LSP)
 nm('<leader>xc', '<cmd>TroubleClose<CR>')   -- Show all problems in project (with help of LSP)
 nm('gr', '<cmd>Trouble lsp_references<CR>') -- Show use of object in project
 -- }}}

@@ -31,7 +31,6 @@ require "plugins.terminal.lazygit"
 -- Initialize plugin setup
 require("outline").setup{}
 require("trouble").setup{}
-require("jabs").setup{}
 require("nvim-cursorline").setup{}
 require("nvim-autopairs").setup {}
 require("lsp-inlayhints").setup{}
