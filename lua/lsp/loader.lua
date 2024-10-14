@@ -40,6 +40,7 @@ mason_lspconfig.setup_handlers {
     if ok and (type(ext) == "table") then
       opt = vim.tbl_extend("force", opt, ext)
     end
+
     -- setup lsp opt.
     lspconfig[server_name].setup(opt)
   end,

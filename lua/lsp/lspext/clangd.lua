@@ -2,7 +2,16 @@ local result = {}
 local dap = require("dap")
 
 
-result.on_attach = function (client, bufnr)
+result.cmd = {
+    "clangd",
+    "--background-index",        
+    "--clang-tidy",              
+    "--completion-style=detailed", 
+    "--header-insertion=iwyu",   
+    "--pch-storage=memory",   
+}
+
+result.on_attach = function (_client, _bufnr)
   dap.adapters.lldb = {
     type = 'executable',
     command = '/usr/bin/lldb-vscode', -- adjust as needed, must be absolute path
@@ -24,8 +33,5 @@ result.on_attach = function (client, bufnr)
 }
 end
 
-result.settings = {
-
-}
-
+result.filetypes = { "c", "cc", "cpp", "objc", "objcpp", "cuda"}
 return result

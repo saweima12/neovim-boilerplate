@@ -37,3 +37,5 @@ require("lsp-inlayhints").setup{}
 require("dap-go").setup{}
 require("neodev").setup{}
 require("todo-comments").setup{}
+require("nt-cpp-tools").setup{}
+require("cscope_maps").setup()

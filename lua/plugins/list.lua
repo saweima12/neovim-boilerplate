@@ -94,6 +94,25 @@ return {
 },
 
 { "nvim-neotest/nvim-nio" },
+
+-- Cpp support
+{
+  "dhananjaylatkar/cscope_maps.nvim",
+  dependencies = {
+    "folke/which-key.nvim", -- optional [for whichkey hints]
+    "nvim-telescope/telescope.nvim", -- optional [for picker="telescope"]
+    "ibhagwan/fzf-lua", -- optional [for picker="fzf-lua"]
+    "echasnovski/mini.pick", -- optional [for picker="mini-pick"]
+    "nvim-tree/nvim-web-devicons", -- optional [for devicons in telescope, fzf or mini.pick]
+  }
+},
+
+{
+    "Badhi/nvim-treesitter-cpp-tools",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+},
+
+
 -- }}}
 
 -- # UI Extension {{{
@@ -261,4 +280,3 @@ end,
 
 }
 
--- vim:tabstop=2 shiftwidth=2 expandtab syntax=lua foldmethod=marker foldlevelstart=0 foldlevel=0

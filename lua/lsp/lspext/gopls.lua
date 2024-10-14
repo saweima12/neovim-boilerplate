@@ -15,12 +15,6 @@ result.on_attach = function(_, bufnr)
   end , { buffer = bufnr, desc = "AddTags" })
 end
 
-local gopls_env = os.getenv("GOPLS_ENV")
-if gopls_env == nil then
-  gopls_env = "dev"
-end
-
-local tag_str = string.format("-tags=%s", gopls_env)
 
 result.settings = {
    gopls = {
@@ -32,8 +26,15 @@ result.settings = {
       parameterNames =  true,
       rangeVariableTypes = true
     },
-    buildFlags={tag_str},
+    buildFlags={}
   }
 }
+
+-- attach the custom environment build tag
+local gopls_env = os.getenv("GOPLS_ENV")
+if gopls_env ~= nil then
+  local tag_str = string.format("-tags=%s", gopls_env)
+  result.settings.gopls.buildFlags = {tag_str}
+end
 
 return result
