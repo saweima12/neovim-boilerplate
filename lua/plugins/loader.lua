@@ -13,6 +13,7 @@ require "plugins.config.dashboard"
 -- Git support
 require "plugins.config.gitsigns"
 
+-- Utilities.
 require "plugins.config.lualine"
 require "plugins.config.neotree"
 require "plugins.config.spectre"
@@ -37,5 +38,4 @@ require("lsp-inlayhints").setup{}
 require("dap-go").setup{}
 require("neodev").setup{}
 require("todo-comments").setup{}
-require("nt-cpp-tools").setup{}
 require("cscope_maps").setup()
